@@ -1,0 +1,179 @@
+/* Responsive Styles for IJIRSES */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (max-width: 991px) {
+  h1.rockwell {
+    font-size: 24px;
+  }
+  
+  .navbar-nav {
+    padding: 10px 0;
+  }
+  
+  .dropdown-menu {
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+  }
+  
+  .dropdown-item {
+    color: white;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: var(--accent-color);
+  }
+  
+  #target {
+    top: 80px;
+    right: 10px;
+  }
+  
+  #target p {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .a_icon {
+    padding: 8px 12px;
+  }
+  
+  .a_icon span i {
+    font-size: 20px;
+  }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (max-width: 767px) {
+  h1.rockwell {
+    font-size: 20px;
+  }
+  
+  .bg-1 .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .bg-1 .nav-link {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .btn.bg-yellow-100 {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .journal-highlight-list li {
+    font-size: 14px;
+  }
+  
+  .tooltip1 .tooltiptext {
+    width: 200px;
+    margin-left: -100px;
+    font-size: 12px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .footer .row > div {
+    margin-bottom: 30px;
+  }
+  
+  #target {
+    top: 60px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  h1.rockwell {
+    font-size: 18px;
+  }
+  
+  .bg-1 .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .bg-1 .nav {
+    justify-content: center;
+  }
+  
+  .multi_lang {
+    margin-top: 10px;
+  }
+  
+  #target {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  #target p {
+    display: none;
+  }
+  
+  .a_icon {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .a_icon span i {
+    font-size: 24px;
+  }
+  
+  .table-responsive {
+    font-size: 14px;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination .page-link {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Print styles */
+@media print {
+  header, footer, #target, .cd-top, .btn, .navbar {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    font-size: 12pt;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+}
