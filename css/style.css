@@ -1,5 +1,3 @@
-/* Main Stylesheet for IJIRSES Journal */
-
 /* Global Styles */
 :root {
   --primary-color: #2c3e50;
@@ -9,7 +7,12 @@
   --dark-bg: #2c3e50;
   --text-dark: #333;
   --text-light: #fff;
-  --border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,8 +22,9 @@ body {
   line-height: 1.6;
 }
 
+/* Header Styles */
 .bg-1 {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 
 .white {
@@ -55,34 +59,52 @@ body {
   font-weight: 600;
 }
 
-/* Navigation */
+/* Navigation - Perfectly Centered */
+.navbar-dark .navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   padding: 0.5rem 1rem;
+  transition: all 0.3s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: var(--accent-color);
-  background-color: rgba(255,255,255,0.1);
+  color: var(--accent-color) !important;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
 
-.dropdown-menu {
-  border: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+@media (max-width: 991px) {
+  .navbar-dark .navbar-nav {
+    padding: 10px 0;
+  }
 }
 
-.dropdown-item:hover {
-  background-color: var(--light-bg);
+/* Logo Styles */
+.logo-img {
+  max-height: 45px;
+  width: auto;
+  display: block;
+}
+
+/* Journal Title */
+.journal-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  line-height: 1.3;
   color: var(--primary-color);
+  padding: 0.75rem 0;
 }
 
-/* Cards and Content */
+/* Cards */
 .card {
   border: none;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
 }
 
@@ -93,80 +115,7 @@ body {
   border-bottom: none;
 }
 
-.bg-grey-200 {
-  background: var(--light-bg);
-}
-
-.bg-grey-300 {
-  background: #dfe4e5;
-}
-
-.rounded-20 {
-  border-radius: var(--border-radius);
-}
-
-.border-left-5 {
-  border-left: 5px solid var(--primary-color) !important;
-}
-
-.border-info {
-  border-color: var(--secondary-color) !important;
-}
-
-/* Journal Highlight List */
-.journal-highlight-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.journal-highlight-list li {
-  padding: 8px 15px;
-  border-bottom: 1px dashed #ccc;
-}
-
-.journal-highlight-list li:last-child {
-  border-bottom: none;
-}
-
-.tooltip1 {
-  position: relative;
-  display: inline-block;
-  cursor: help;
-  padding: 8px 15px;
-}
-
-.tooltip1 .tooltiptext {
-  visibility: hidden;
-  width: 250px;
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  text-align: center;
-  border-radius: 6px;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -125px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.tooltip1:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Sidebar */
-.sidebar img {
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Footer */
+/* Footer Styles */
 .footer {
   background-color: var(--dark-bg);
   color: var(--text-light);
@@ -193,38 +142,95 @@ body {
   margin-bottom: 5px;
 }
 
-/* Get The App Icon */
-#target {
+/* Contact Line */
+.contact-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.contact-line i {
+  width: 28px;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.feature-list li:before {
+  content: "\f00c";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   position: absolute;
-  top: 110px;
-  right: 20px;
-  z-index: 1000;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 0.9rem;
 }
 
-#target p {
-  background: var(--secondary-color);
-  color: white;
-  padding: 5px 10px;
-  margin: 0;
-  border-radius: 4px 4px 0 0;
-  font-weight: 600;
-  font-size: 12px;
+/* Flyer Image */
+.flyer-img {
+  max-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s;
 }
 
-.a_icon {
-  background: var(--accent-color);
-  padding: 10px 15px;
+.flyer-img:hover {
+  opacity: 0.9;
+}
+
+/* Google Scholar Banner */
+.scholar-banner {
+  background: #fef8e7;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 0 15px 20px;
   text-align: center;
-  border-radius: 0 0 4px 4px;
 }
 
-.a_icon span i {
-  font-size: 24px;
+.scholar-banner i {
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+/* Editorial Board Styles */
+.editor-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.editor-card:last-child {
+  border-bottom: none;
+}
+
+.editor-name {
   color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.a_icon:hover {
-  background: #e6b800;
+.editor-affiliation {
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.editor-email {
+  color: var(--secondary-color);
+  word-break: break-all;
 }
 
 /* Scroll to Top */
@@ -257,69 +263,31 @@ body {
   text-decoration: none;
 }
 
-/* Form Styles */
-.form-control:focus {
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.2rem rgba(52,152,219,0.25);
+/* Hide language dropdown */
+.multi_lang {
+  display: none !important;
 }
 
-.btn-primary {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
+/* Responsive */
+@media (max-width: 768px) {
+  .journal-title {
+    white-space: normal;
+    text-align: center;
+  }
+  
+  .flyer-img {
+    max-width: 140px;
+    margin: 0 auto 15px;
+  }
+  
+  .editor-card {
+    text-align: center;
+  }
 }
 
-.btn-primary:hover {
-  background-color: #2980b9;
-  border-color: #2980b9;
-}
-
-/* Responsive Tables */
-.table-responsive {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.table thead th {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-}
-
-/* Article Cards */
-.article-card {
-  transition: transform 0.3s;
-  height: 100%;
-}
-
-.article-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.article-meta {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.article-meta i {
-  margin-right: 5px;
-  color: var(--secondary-color);
-}
-
-/* Pagination */
-.pagination .page-link {
-  color: var(--primary-color);
-  border: 1px solid #ddd;
-}
-
-.pagination .page-item.active .page-link {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: white;
-}
-
-.pagination .page-link:hover {
-  background-color: var(--light-bg);
-  color: var(--primary-color);
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
