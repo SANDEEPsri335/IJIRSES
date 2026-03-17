@@ -147,26 +147,6 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.02);
     }
     
-    .indexing-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 15px;
-    }
-    
-    .indexing-badge {
-      background: #f8f9fa;
-      border-radius: 30px;
-      padding: 8px 18px;
-      font-size: 0.9rem;
-      border: 1px solid #e0e0e0;
-    }
-    
-    .indexing-badge i {
-      color: var(--accent-color);
-      margin-right: 6px;
-    }
-    
     .scholar-card {
       background: linear-gradient(135deg, var(--primary-color) 0%, #1a2632 100%);
       color: white;
@@ -226,7 +206,7 @@
       </div>
     </div>
 
-    <!-- Journal Header - Now Centered -->
+    <!-- Journal Header - Centered -->
     <div class="py-2">
       <div class="container-fluid">
         <div class="row">
@@ -298,7 +278,7 @@
       <a href="archive.html" class="action-btn secondary"><i class="fa fa-archive mr-2"></i> View Archive</a>
     </div>
     
-    <!-- Features Grid -->
+    <!-- Features Grid - Clean version without "Growing Impact" -->
     <h3 style="color: var(--primary-color); margin: 30px 0 20px;">Journal Highlights</h3>
     <div class="feature-grid">
       <div class="feature-item">
@@ -340,19 +320,11 @@
         <h4>Creative Commons</h4>
         <p>Share and adapt with proper credit</p>
       </div>
-      
-      <div class="feature-item">
-        <div class="feature-icon">
-          <i class="fa fa-chart-line"></i>
-        </div>
-        <h4>Growing Impact</h4>
-        <p>Increasing citations and readership</p>
-      </div>
     </div>
     
-    <!-- Content Section -->
+    <!-- Content Section - No Indexing or Metrics sections -->
     <div class="row mt-4">
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <div class="content-card">
           <p style="font-size: 1rem; line-height: 1.8;">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty.</p>
           
@@ -364,25 +336,14 @@
           </div>
         </div>
       </div>
-      
-      <div class="col-lg-4">
-        <!-- Indexing Card -->
-        <div class="content-card">
-          <h5 style="color: var(--primary-color); margin-bottom: 20px;">Indexed In</h5>
-          <div class="indexing-badges">
-            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Scopus</span>
-            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Web of Science</span>
-            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Google Scholar</span>
-            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> PubMed</span>
-            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> DOAJ</span>
-            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Index Copernicus</span>
-          </div>
-        </div>
-        
-        <!-- Google Scholar Card - No button -->
+    </div>
+    
+    <!-- Google Scholar Card - Kept but moved to bottom -->
+    <div class="row mt-3">
+      <div class="col-lg-12">
         <div class="scholar-card">
           <h5><i class="fab fa-google"></i> Google Scholar</h5>
-          <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 15px;">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
+          <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 10px; margin-bottom: 0;">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
         </div>
       </div>
     </div>
