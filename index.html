@@ -23,66 +23,140 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- consolidated local styles -->
   <style>
-    /* style.css (consolidated) */
-    :root{--primary-color:#2c3e50;--secondary-color:#3498db;--accent-color:#f1c40f;--light-bg:#ecf0f1;--dark-bg:#2c3e50;--text-dark:#333;--text-light:#fff;--border-radius:20px}
-    body{font-family:'Open Sans',sans-serif;background:#f5f7fa;color:var(--text-dark);line-height:1.6}
-    .bg-1{background-color:var(--primary-color)}
-    .white{color:var(--text-light)!important}
-    .white:hover{color:var(--accent-color)!important;text-decoration:none}
-    .bg-yellow-100{background:var(--accent-color);color:var(--primary-color);font-weight:600;border-radius:4px;padding:0.5rem 1rem}
-    .bg-yellow-100:hover{background:#e6b800;color:var(--primary-color)}
-    .rockwell{font-family:'Spectral',serif;font-weight:600;color:var(--primary-color)}
-    .fweight-600{font-weight:600}
-    .navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,0.9);font-weight:500;padding:0.5rem 1rem}
-    .navbar-dark .navbar-nav .nav-link:hover,.navbar-dark .navbar-nav .nav-link.active{color:var(--accent-color);background-color:rgba(255,255,255,0.1);border-radius:4px}
-    .dropdown-menu{border:none;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
-    .dropdown-item:hover{background-color:var(--light-bg);color:var(--primary-color)}
-    .card{border:none;box-shadow:0 2px 15px rgba(0,0,0,0.05);margin-bottom:20px}
-    .card-header{background-color:var(--primary-color);color:var(--text-light);font-weight:600;border-bottom:none}
-    .bg-grey-200{background:var(--light-bg)}
-    .bg-grey-300{background:#dfe4e5}
-    .rounded-20{border-radius:var(--border-radius)}
-    .border-left-5{border-left:5px solid var(--primary-color)!important}
-    .border-info{border-color:var(--secondary-color)!important}
-    .journal-highlight-list{list-style:none;padding:0;margin:0}
-    .journal-highlight-list li{padding:8px 15px;border-bottom:1px dashed #ccc}
-    .journal-highlight-list li:last-child{border-bottom:none}
-    .footer{background-color:var(--dark-bg);color:var(--text-light);padding:20px 0 0}  /* reduced padding */
-    .footer a{color:#ccc;transition:color 0.3s}
-    .footer a:hover{color:var(--accent-color);text-decoration:none}
-    .footer h5{color:var(--accent-color);margin-bottom:15px;font-weight:600;font-size:1.1rem}
-    .footer address p{margin-bottom:5px}
-    .cd-top{position:fixed;bottom:30px;right:30px;background:var(--secondary-color);color:white;width:40px;height:40px;border-radius:50%;text-align:center;line-height:40px;font-size:20px;opacity:0;visibility:hidden;transition:all 0.3s;z-index:1000}
-    .cd-top--is-visible{opacity:1;visibility:visible}
-    .cd-top:hover{background:var(--primary-color);color:white;text-decoration:none}
-    /* custom additions */
-    .journal-title{font-size:clamp(1.1rem, 2.5vw, 1.8rem);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;padding-right:10px}
-    .logo-fixed{max-height:45px;width:auto;display:block}
-    .flyer-fixed{max-width:140px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:0.5rem;cursor:pointer;transition:opacity 0.2s}
-    .flyer-fixed:hover{opacity:0.8}
-    /* center nav on desktop */
-    @media (min-width: 992px) {
-      .navbar .navbar-collapse { justify-content: center !important; }
-      .navbar-nav { margin: 0 auto; }
+    /* Global Styles */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #f1c40f;
+      --light-bg: #ecf0f1;
+      --dark-bg: #2c3e50;
+      --text-dark: #333;
+      --text-light: #fff;
     }
-    /* hide language dropdown entirely */
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f5f7fa;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    
+    .bg-1 { background-color: var(--primary-color); }
+    .white { color: var(--text-light) !important; }
+    .white:hover { color: var(--accent-color) !important; text-decoration: none; }
+    .bg-yellow-100 { background: var(--accent-color); color: var(--primary-color); font-weight: 600; border-radius: 4px; padding: 0.5rem 1rem; }
+    .bg-yellow-100:hover { background: #e6b800; color: var(--primary-color); }
+    .rockwell { font-family: 'Spectral', serif; font-weight: 600; color: var(--primary-color); }
+    .fweight-600 { font-weight: 600; }
+    
+    /* Navigation - Fixed Centering */
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: var(--accent-color);
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+    
+    /* Center navigation on all screen sizes */
+    .navbar .navbar-collapse {
+      text-align: center;
+    }
+    
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    
+    .navbar-nav > li {
+      float: none;
+      display: inline-block;
+    }
+    
+    /* Cards */
+    .card { border: none; box-shadow: 0 2px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
+    .card-header { background-color: var(--primary-color); color: var(--text-light); font-weight: 600; border-bottom: none; }
+    .bg-grey-300 { background: #dfe4e5; }
+    
+    /* Footer */
+    .footer { background-color: var(--dark-bg); color: var(--text-light); padding: 20px 0 0; }
+    .footer a { color: #ccc; transition: color 0.3s; }
+    .footer a:hover { color: var(--accent-color); text-decoration: none; }
+    .footer h5 { color: var(--accent-color); margin-bottom: 15px; font-weight: 600; font-size: 1.1rem; }
+    
+    /* Custom styles */
+    .journal-title { 
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem); 
+      line-height: 1.3; 
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      max-width: 100%; 
+    }
+    
+    .logo-fixed { max-height: 45px; width: auto; display: block; }
+    .flyer-fixed { max-width: 140px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: opacity 0.2s; }
+    .flyer-fixed:hover { opacity: 0.8; }
+    
+    /* Contact line */
+    .contact-line { display: flex; align-items: center; margin-bottom: 0.5rem; font-size: 0.9rem; }
+    .contact-line i { width: 24px; color: var(--accent-color); font-size: 1rem; }
+    
+    /* Feature list */
+    .list-modern { list-style: none; padding-left: 0; margin-bottom: 0.5rem; }
+    .list-modern li { margin-bottom: 0.5rem; padding-left: 1.6rem; position: relative; font-size: 0.95rem; }
+    .list-modern li:before { 
+      content: "\f00c"; 
+      font-family: 'Font Awesome 5 Free'; 
+      font-weight: 900; 
+      position: absolute; 
+      left: 0; 
+      color: var(--accent-color); 
+      font-size: 0.8rem; 
+    }
+    
+    /* Google Scholar mini card */
+    .scholar-mini { 
+      background: #fef8e7; 
+      border-radius: 12px; 
+      padding: 0.8rem 1rem; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-left: 4px solid var(--accent-color);
+      text-align: center;
+    }
+    .scholar-mini i { color: var(--secondary-color); margin-right: 6px; }
+    
+    /* Hide language dropdown */
     .multi_lang { display: none !important; }
-    /* contact line style */
-    .contact-line{display:flex;align-items:center;margin-bottom:0.5rem;font-size:0.9rem}
-    .contact-line i{width:24px;color:var(--accent-color);font-size:1rem}
-    /* about section list */
-    .list-modern{list-style:none;padding-left:0;margin-bottom:0.5rem}
-    .list-modern li{margin-bottom:0.5rem;padding-left:1.6rem;position:relative;font-size:0.95rem}
-    .list-modern li:before{content:"\f00c";font-family:'Font Awesome 5 Free';font-weight:900;position:absolute;left:0;color:var(--accent-color);font-size:0.8rem}
-    /* google scholar mini card */
-    .scholar-mini{background:#fef8e7;border-radius:12px;padding:0.8rem 1rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;border-left:4px solid var(--accent-color)}
-    .scholar-mini p{margin-bottom:0;font-weight:500}
-    .scholar-mini i{color:var(--secondary-color);margin-right:6px}
-    /* reduce footer bottom padding */
-    .footer .container-fluid.py-4{padding-top:1rem!important;padding-bottom:0.5rem!important}
-    .bg-1.py-2{padding-top:0.3rem!important;padding-bottom:0.3rem!important}
+    
+    /* Scroll to top */
+    .cd-top {
+      position: fixed; bottom: 30px; right: 30px; background: var(--secondary-color);
+      color: white; width: 40px; height: 40px; border-radius: 50%; text-align: center;
+      line-height: 40px; font-size: 20px; opacity: 0; visibility: hidden;
+      transition: all 0.3s; z-index: 1000;
+    }
+    .cd-top--is-visible { opacity: 1; visibility: visible; }
+    .cd-top:hover { background: var(--primary-color); color: white; text-decoration: none; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENVBW9JCFM"></script>
@@ -101,7 +175,10 @@
       <div class="container-fluid py-1">
         <div class="row justify-content-between align-items-center">
           <div class="col-sm-auto">
-            <a href="index.html" title="IJIRSES"><img src="images/logo-white.svg" alt="IJIRSES" class="logo-fixed"></a>
+            <a href="index.html" title="IJIRSES">
+              <!-- Using logo.jpeg or logo.jpg - both will work -->
+              <img src="images/logo.jpeg" alt="IJIRSES" class="logo-fixed" onerror="this.src='images/logo.jpg'">
+            </a>
           </div>
           <div class="col-sm-auto">
             <nav class="nav">
@@ -113,73 +190,72 @@
       </div>
     </div>
     
-    <!-- Journal Header (title one line) -->
+    <!-- Journal Header -->
     <div class="py-2">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-12">
+          <div class="col-12 text-center">
             <h1 class="rockwell fweight-600 mb-0 journal-title">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
           </div>
         </div>
       </div>
     </div>
     
-    <!-- Navigation (centered) -->
+    <!-- Navigation - NOW PERFECTLY CENTERED -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-1">
-      <a class="navbar-brand d-none" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarJrnl" aria-controls="navbarJrnl" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarJrnl">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Journal Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="editorial-board.html">Editorial Board</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link custom-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Author Guidelines <i class="fa fa-angle-down align-middle"></i></a>
-            <div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdownMenuLink">                                   
-              <a class="dropdown-item" href="aims-scope.html">Aim & Scope</a>
-              <a class="dropdown-item" href="instructions-authors.html">Instruction For Authors</a>
-              <a class="dropdown-item" href="author-guidelines.html">Author Guidelines</a>
-              <a class="dropdown-item" href="peer-review-process.html">Peer Review Process</a>
-              <a class="dropdown-item" href="ethics-malpractices.html">Publication Ethics & Malpractice Statement</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="articles-inprocess.html">Articles in process</a></li>
-          <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
-          <li class="nav-item"><a class="nav-link" href="submit-manuscript.html">Submit Manuscript</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Journal Contact</a></li>	
-        </ul>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarJrnl" aria-controls="navbarJrnl" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarJrnl">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Journal Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="editorial-board.html">Editorial Board</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Author Guidelines</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">                                   
+                <a class="dropdown-item" href="aims-scope.html">Aim & Scope</a>
+                <a class="dropdown-item" href="instructions-authors.html">Instruction For Authors</a>
+                <a class="dropdown-item" href="author-guidelines.html">Author Guidelines</a>
+                <a class="dropdown-item" href="peer-review-process.html">Peer Review Process</a>
+                <a class="dropdown-item" href="ethics-malpractices.html">Publication Ethics & Malpractice Statement</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="articles-inprocess.html">Articles in process</a></li>
+            <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
+            <li class="nav-item"><a class="nav-link" href="submit-manuscript.html">Submit Manuscript</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Journal Contact</a></li>	
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
 
-  <!-- Main Content: two-column with flyer inside about block -->
+  <!-- Main Content -->
   <div class="container-fluid py-3">
     <div class="row">
-      <!-- Left column: now empty (flyer moved inside content) -->
-      <div class="col-12 col-sm-2">
-        <!-- intentionally left blank to keep layout; no sidebar elements -->
-      </div>
+      <!-- Left column (empty for spacing) -->
+      <div class="col-12 col-sm-2"></div>
       
-      <!-- Center Content (about + flyer integrated) -->
+      <!-- Center Content -->
       <div class="col-12 col-sm">
         <div class="card rounded-0 border-0 shadow-sm">
           <div class="card-body">
-            <!-- Flex row for about text and flyer -->
+            <!-- Row with text and flyer -->
             <div class="row align-items-start">
               <div class="col-md-8">
                 <h3 class="mb-3" style="color:var(--primary-color); font-weight:600;">About the Journal</h3>
                 <p class="lead" style="font-size:1rem"><strong>IJIRSES</strong> is a prestigious monthly open access journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>. Our mission is to accelerate discovery by providing a rigorous yet rapid peer-review process and immediate, worldwide visibility.</p>
               </div>
               <div class="col-md-4 text-center text-md-right">
-                <!-- flyer inserted here, clickable to index -->
+                <!-- Flyer - using fler.jpeg or fler.jpg -->
                 <a href="index.html">
-                  <img src="images/journal-flyer.jpg" alt="Flyer" class="flyer-fixed" style="max-width:140px">
+                  <img src="images/fler.jpeg" alt="Journal Flyer" class="flyer-fixed" onerror="this.src='images/fler.jpg'">
                 </a>
               </div>
             </div>
             
-            <!-- updated feature list (3-5 days, without removed items) -->
+            <!-- Feature list -->
             <div class="row mt-2">
               <div class="col-md-6">
                 <ul class="list-modern">
@@ -196,34 +272,33 @@
               </div>
             </div>
             
-            <p class="mt-2" style="font-size:0.95rem">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty. <strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
+            <p class="mt-2" style="font-size:0.95rem">The journal publishes original research articles, comprehensive reviews, and short communications. All manuscripts undergo thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty.</p>
             
-            <p class="mb-0"><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
+            <p class="mb-0"><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers, scientists, and practitioners to submit their innovative work.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   
-  <!-- Bottom Section: Google Scholar (compact, no button) -->
+  <!-- Google Scholar Section -->
   <section class="bg-grey-300 py-3">
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
           <div class="scholar-mini">
-            <p><i class="fas fa-graduation-cap"></i> <strong>Google Scholar</strong> — IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
-            <!-- no button, just statement -->
+            <p class="mb-0"><i class="fas fa-graduation-cap"></i> <strong>Google Scholar</strong> — IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
   
-  <!-- Footer (reduced size, only essential contact, social, ISSN) -->
+  <!-- Footer -->
   <footer class="footer bg-dark text-white">
     <div class="container-fluid py-3">
       <div class="row">
-        <!-- Contact compact -->
+        <!-- Contact -->
         <div class="col-md-7 mb-2 mb-md-0">
           <h5>Contact</h5>
           <address class="mb-0" style="font-size:0.9rem">
@@ -231,7 +306,7 @@
             <div class="contact-line"><i class="fas fa-envelope"></i> <a href="mailto:editorijirses@gmail.com" class="white">editorijirses@gmail.com</a></div>
           </address>
         </div>
-        <!-- Follow and ISSN -->
+        <!-- Social -->
         <div class="col-md-5">
           <h5>Follow us</h5>
           <nav class="nav">
@@ -243,7 +318,6 @@
         </div>
       </div>
     </div>
-    <!-- Copyright line (minimal) -->
     <div class="bg-1 py-1">
       <div class="container-fluid">
         <div class="row justify-content-center text-center">
