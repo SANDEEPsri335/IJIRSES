@@ -1,386 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES) - Peer-reviewed open access journal for research publication">
-    <title>IJIRSES | International Journal of Innovative Research in Sciences and Engineering Studies</title>
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</title>
+  <meta name="keywords" content="IJIRSES, International Journal of Innovative Research in Sciences and Engineering Studies, open access journal, peer-reviewed, sciences and engineering research" />
+  <meta name="description" content="IJIRSES is an online open access monthly international peer-reviewed journal welcoming outstanding research papers in Sciences and Engineering studies." />
+  <meta property="og:title" content="International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)">
+  <meta property="og:site_name" content="IJIRSES">
+  <meta property="og:url" content="https://www.ijirses.org/">
+  <meta property="og:description" content="Open access peer-reviewed journal for Sciences and Engineering. Original research, reviews, and short communications.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IJIRSES">
+  <meta name="twitter:description" content="Innovative Research in Sciences and Engineering Studies">
+
+  <!-- Bootstrap CSS + fonts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lpc2eiw.css">
+  <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENVBW9JCFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ENVBW9JCFM');
+  </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="IJIRSES Logo">
-                        <div class="logo-text">
-                            <h1>IJIRSES</h1>
-                            <p>International Journal of Innovative Research in Sciences and Engineering Studies</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="issn">
-                    <span>ISSN: 2583-1658</span>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Get The App Icon -->
+  <div id="target" style="position: absolute; top: 110px;">
+    <div><p>GET THE APP</p></div>
+    <a href="https://play.google.com/store/apps/details?id=com.journals.ijirses&hl=en" target="_blank" id="getAppModel">
+      <div class="a_icon">
+        <span><i class="fa fa-android"></i></span>
+      </div>
+    </a>
+  </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                <li class="dropdown">
-                    <a href="#">ABOUT US <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/about.html">About IJIRSES</a></li>
-                        <li><a href="pages/about.html#mission">Mission & Scope</a></li>
-                        <li><a href="pages/editorial-board.html">Editorial Board</a></li>
-                        <li><a href="pages/about.html#indexing">Indexing</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">CALL FOR PAPERS <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/call-for-papers.html">Call for Papers</a></li>
-                        <li><a href="pages/call-for-papers.html#charges">Processing Charges</a></li>
-                        <li><a href="pages/archive.html#upcoming">Upcoming Issues</a></li>
-                        <li><a href="pages/call-for-papers.html#ethics">Publishing Ethics</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">FOR AUTHORS <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/author-guidelines.html">Author Guidelines</a></li>
-                        <li><a href="pages/submit.html">Submit Manuscript</a></li>
-                        <li><a href="pages/call-for-papers.html#charges">Processing Charges</a></li>
-                        <li><a href="pages/author-guidelines.html#downloads">Downloads</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">ARCHIVE <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/archive.html?vol=4">Volume 4 - 2025</a></li>
-                        <li><a href="pages/archive.html?vol=3">Volume 3 - 2024</a></li>
-                        <li><a href="pages/archive.html?vol=2">Volume 2 - 2023</a></li>
-                        <li><a href="pages/archive.html?vol=1">Volume 1 - 2022</a></li>
-                    </ul>
-                </li>
-                <li><a href="pages/editorial-board.html">EDITORIAL BOARD</a></li>
-                <li><a href="pages/contact.html">CONTACT US</a></li>
-                <li class="auth-buttons">
-                    <a href="#login" class="btn-login">LOGIN</a>
-                    <a href="pages/submit.html" class="btn-signup">SIGN UP</a>
-                </li>
-            </ul>
+  <!-- Header -->
+  <header>
+    <!-- Topbar -->
+    <div class="bg-1">
+      <div class="container-fluid py-1">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-sm-auto">
+            <a href="index.html" title="IJIRSES"><img src="images/logo-white.svg" alt="IJIRSES" height="50"></a>
+          </div>
+          <div class="col-sm-auto">
+            <nav class="nav">
+              <a class="nav-link white"><i class="fa fa-whatsapp"></i> +447723860698</a>
+              <a href="mailto:editorial@ijirses.org" class="nav-link white"><i class="fas fa-envelope-square"></i> editorial@ijirses.org</a>
+              <a href="submit-manuscript.html" title="Submit Manuscript" class="btn bg-yellow-100">Submit Manuscript</a>
+              
+              <!-- Language dropdown -->
+              <div class="nav-item dropdown multi_lang j_multi_lang">
+                <a class="nav-link dropdown-toggle" href="#" id="multi_lang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                <div class="dropdown-menu" aria-labelledby="multi_lang">
+                  <a class="dropdown-item" href="#"><img src="images/flags/spain.png">Spanish</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/china.png">Chinese</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/france.png">French</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/germany.png">German</a>
+                </div>
+              </div>
+            </nav>
+          </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Journal Header -->
+    <div class="py-3">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-sm-auto">					
+            <h1 class="rockwell fweight-600 mb-0">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-1">
+      <a class="navbar-brand d-none" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarJrnl" aria-controls="navbarJrnl" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarJrnl">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Journal Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="editorial-board.html">Editorial Board</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link custom-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Author Guidelines <i class="fa fa-angle-down align-middle"></i></a>
+            <div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdownMenuLink">                                   
+              <a class="dropdown-item" href="aims-scope.html">Aim & Scope</a>
+              <a class="dropdown-item" href="instructions-authors.html">Instruction For Authors</a>
+              <a class="dropdown-item" href="author-guidelines.html">Author Guidelines</a>
+              <a class="dropdown-item" href="peer-review-process.html">Peer Review Process</a>
+              <a class="dropdown-item" href="ethics-malpractices.html">Publication Ethics & Malpractice Statement</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="articles-inprocess.html">Articles in process</a></li>
+          <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
+          <li class="nav-item"><a class="nav-link" href="submit-manuscript.html">Submit Manuscript</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Journal Contact</a></li>	
+        </ul>
+      </div>
     </nav>
+  </header>
 
-    <!-- Notice Bar -->
-    <div class="notice-bar">
-        <div class="container">
-            <div class="notice-content">
-                <i class="fas fa-exclamation-triangle"></i>
-                <strong>Official Notice:</strong>
-                <span>www.ijirses.com is the official website of the International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES). Please beware of fake or duplicate websites using the IJIRSES name.</span>
+  <!-- Main Content -->
+  <div class="container-fluid py-3">
+    <div class="row">
+      <!-- Left Sidebar -->
+      <div class="col-12 col-sm-2">
+        <div>
+          <article class="news-v1 border-1 margin-b-30">
+            <div class="news-v1-heading">
+              <h6 class="news-v1-heading-title" style="padding:5px;">
+                <i class="fa fa-whatsapp"></i> +447723860698
+              </h6>
             </div>
+          </article>
         </div>
+        
+        <img src="images/journal-flyer.jpg" alt="Flyer" class="img-fluid w-100">
+        <br/><br/>
+        
+        <a href="awards-nomination.html" class="btn btn-info btn-block mb-3 border-0 border-left-4 border-info font-size-4 awards_link">
+          <i class="fa-light fa-award-simple"></i> Awards Nomination
+        </a>
+        
+        <a href="#" class="btn btn-warning btn-block mb-3 border-0 border-left-4 border-info font-size-4">
+          <i class="fas fa-book-reader"></i> 5+ Million Readerbase
+        </a>
+        
+        <h6><a target="_blank" href="https://scholar.google.com/citations?user=ijirses" title="Click here">Google Scholar citation report</a></h6>
+        <h6 style="font-weight:bold;">Citations : 24</h6>
+        
+        <p><a target="_blank" href="citations.html">IJIRSES received 24 citations as per Google Scholar report</a></p>
+        
+        <div class="card shadow-sm sidebar mt-2">
+          <a href="citations.html"><img src="images/citation-image.png" alt="Citations" class="img-fluid p_rel" /></a>
+        </div>
+      </div>
+      
+      <!-- Center Content -->
+      <div class="col-12 col-sm">
+        <div class="card rounded-0">
+          <div class="card-body">
+            <h3 class="">About the Journal</h3>
+            
+            <!-- Stats Cards -->
+            <div class="row">
+              <div class="col-12 col-sm-12">
+                <div class="card card-body bg-grey-200 my-3 p-2 rounded-20 border-0 border-left-5 shadow-sm border-info equal-height" style="border-left: 5px solid #212529!important;">
+                  <ul class="nav row journal-highlight-list">
+                    <li class="col-lg-12">Journal h-index : 7</li>
+                    <li class="col-lg-12">Average acceptance to publication time (5-7 days)</li>
+                    <li class="tooltip1">Average article processing time (30-45 days)</li>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+            
+            <p><b>Index Copernicus Value 2024: 92.45</b></p>
+            <p><b>NLM ID: 1023456789</b></p>
+            
+            <p><strong>International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</strong> is an Online open access monthly journal. IJIRSES is an international peer-reviewed journal. IJIRSES welcomes outstanding research papers in Sciences and Engineering studies.</p>
+            
+            <p>IJIRSES publishes original papers of high scientific standard related to sciences and Engineering Technology, which are not previously published.</p>
+            
+            <p>IJIRSES always tries to welcome papers from Sciences and Engineering subjects for distributed in its worldwide Journals in the wake of fitting examination and compelling review. IJIRSES appropriates the progression and development from all departments of Sciences and Engineering subjects of the insightful world.</p>
+            
+            <p>The published papers are made highly visible to the scientific community through a wide indexing policy adopted by this online international journal. Hence, they can freely be accessed and utilized by everyone for the development of science and technology.</p>
+            
+            <p>The purpose of this journal is to provide a platform for Researches, Scientists, Academicians, and Students all over the world to develop, share, and discuss various new issues and developments in diverse areas of Engineering. Moreover, it enhance the research skills and achieving my academic career. Researchers from the academy and industry world are invited to publish their research articles in this journal.</p>
+            
+            <p>This scholarly publishing is using Editorial Tracking System for quality in the review process. Editorial Tracking is an online manuscript submission, review, and the progress of the article. Review processing is performed by the editorial board members of the journal or outside experts; at least two independent reviewers' approval followed by the editor is required for the acceptance of any citable manuscript.</p>
+          </div>
+        </div>
+        
+        <!-- h-index Section -->
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <div class="card card-body bg-grey-200 my-3 p-2 rounded-20 border-0 border-left-5 shadow-sm border-info equal-height" style="border-left: 5px solid #212529!important;">
+              <h4 class="font-size-4">h-index</h4>
+              <p class="card-text">
+                Articles published in <strong>IJIRSES</strong> have been cited by esteemed scholars and scientists all around the world. 
+                <strong>IJIRSES</strong> has got 
+                <strong><a href="abstracting-indexing.html">h-index 7</a></strong>, which means every article in IJIRSES has got an average of 7 citations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="content-wrapper">
-                <!-- Left Sidebar -->
-                <aside class="sidebar left-sidebar">
-                    <!-- ISSN Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>ISSN: 2583-1658</h3>
-                        </div>
-                    </div>
-
-                    <!-- Submission Info Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="deadline-info">
-                                <p><strong>Paper Submission Last Date</strong></p>
-                                <p class="date">30 - April - 2025</p>
-                                
-                                <p><strong>Review Result</strong></p>
-                                <p class="date">Within 3 Days</p>
-                                
-                                <p><strong>Final Publication</strong></p>
-                                <p class="date">3-5 Days</p>
-                            </div>
-                            
-                            <a href="pages/submit.html" class="btn-submit">SUBMIT YOUR PAPER</a>
-                            <a href="pages/call-for-papers.html" class="btn-call">CALL FOR PAPERS</a>
-                        </div>
-                    </div>
-
-                    <!-- Latest Updates Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>LATEST UPDATES</h3>
-                            <div class="updates-marquee">
-                                <marquee direction="up" scrollamount="2" onmouseover="this.stop()" onmouseout="this.start()">
-                                    <p><strong>DOI Assignment:</strong> Each published paper gets unique DOI</p>
-                                    <p><strong>DOI Prefix:</strong> https://doi.org/10.38124/ijirses</p>
-                                    <p><strong>Processing Charges:</strong> View details</p>
-                                    <p><strong>Last Date:</strong> April 30, 2025</p>
-                                    <p><strong>Join as Reviewer:</strong> Applications open</p>
-                                    <p><strong>Impact Factor 2025:</strong> Now available</p>
-                                </marquee>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Latest Issues Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>LATEST ISSUES</h3>
-                            <div class="issue-list">
-                                <div class="issue-item">
-                                    <h4><a href="pages/archive.html">Volume 4, Issue 3 - March 2025</a></h4>
-                                </div>
-                                <div class="issue-item">
-                                    <h4><a href="pages/archive.html">Volume 4, Issue 2 - February 2025</a></h4>
-                                </div>
-                                <div class="issue-item">
-                                    <h4><a href="pages/archive.html">Volume 4, Issue 1 - January 2025</a></h4>
-                                </div>
-                                <div class="issue-item">
-                                    <h4><a href="pages/archive.html">Volume 3, Issue 12 - December 2024</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Main Center Content -->
-                <section class="main-center">
-                    <!-- Banner -->
-                    <div class="banner">
-                        <a href="pages/submit.html">
-                            <img src="assets/images/submit-banner.jpg" alt="Submit Your Paper" class="banner-img">
-                        </a>
-                    </div>
-
-                    <!-- About Journal -->
-                    <div class="journal-info">
-                        <h2>About the Journal</h2>
-                        <p class="journal-description">
-                            <strong>IJIRSES (International Journal of Innovative Research in Sciences and Engineering Studies)</strong> 
-                            is an open-access, peer-reviewed international journal dedicated to publishing high-quality research papers 
-                            in the fields of science, engineering, and technology. We welcome original research articles, review papers, 
-                            and case studies from researchers, scientists, and engineers worldwide.
-                        </p>
-
-                        <h3>Why Publish with IJIRSES?</h3>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check-circle"></i> Rapid peer review process</li>
-                            <li><i class="fas fa-check-circle"></i> Open Access - freely available to all</li>
-                            <li><i class="fas fa-check-circle"></i> DOI assignment for each paper</li>
-                            <li><i class="fas fa-check-circle"></i> Indexed in major databases</li>
-                            <li><i class="fas fa-check-circle"></i> No publication fee for first 50 submissions</li>
-                            <li><i class="fas fa-check-circle"></i> Certificate of publication provided</li>
-                            <li><i class="fas fa-check-circle"></i> Online submission and tracking</li>
-                            <li><i class="fas fa-check-circle"></i> High visibility and citation potential</li>
-                        </ul>
-
-                        <h3>Journal Scope</h3>
-                        <p>IJIRSES covers a wide range of topics including but not limited to:</p>
-                        <div class="scope-grid">
-                            <div class="scope-item">Computer Science & IT</div>
-                            <div class="scope-item">Electronics & Communication</div>
-                            <div class="scope-item">Mechanical Engineering</div>
-                            <div class="scope-item">Civil Engineering</div>
-                            <div class="scope-item">Electrical Engineering</div>
-                            <div class="scope-item">Chemical Engineering</div>
-                            <div class="scope-item">Biotechnology</div>
-                            <div class="scope-item">Physics & Mathematics</div>
-                            <div class="scope-item">Chemistry & Materials Science</div>
-                            <div class="scope-item">Environmental Science</div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Right Sidebar -->
-                <aside class="sidebar right-sidebar">
-                    <!-- Impact Factor Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>IMPACT FACTOR</h3>
-                            <div class="impact-factor">
-                                <a href="#">
-                                    <span class="if-value">7.425</span>
-                                    <span class="if-label">SJIF 2025</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DOI Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>DOI (Crossref)</h3>
-                            <div class="doi-info">
-                                <a href="https://doi.org/10.38124/ijirses" target="_blank">
-                                    10.38124/ijirses
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Indexing Partners Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>INDEXING PARTNERS</h3>
-                            <div class="indexing-logos">
-                                <div class="index-item">
-                                    <img src="assets/images/indexing/crossref.png" alt="Crossref">
-                                </div>
-                                <div class="index-item">
-                                    <img src="assets/images/indexing/google-scholar.png" alt="Google Scholar">
-                                </div>
-                                <div class="index-item">
-                                    <img src="assets/images/indexing/researchgate.png" alt="ResearchGate">
-                                </div>
-                                <div class="index-item">
-                                    <img src="assets/images/indexing/orcid.png" alt="ORCID">
-                                </div>
-                                <div class="index-item">
-                                    <img src="assets/images/indexing/scribd.png" alt="Scribd">
-                                </div>
-                                <div class="index-item">
-                                    <img src="assets/images/indexing/academia.png" alt="Academia.edu">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+  </div>
+  
+  <!-- Bottom Sections -->
+  <section class="bg-grey-300 py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Editorial Board -->
+        <div class="col">
+          <div class="card rounded-0 match-height">
+            <h5 class="card-header">Editorial Board</h5>
+            <ul class="list-group list-group-flush mb-0">
+              <li class="list-group-item">
+                <a href="#"><strong>Dr. Sarah Johnson</strong></a>, PhD			
+                <br>Editor-in-Chief
+                <br>Department of Materials Science
+                <br>Stanford University, USA
+              </li>
+              <li class="list-group-item">
+                <a href="#"><strong>Prof. Ahmed Hassan</strong></a>, Ph.D. (Biotechnology)			
+                <br>Associate Editor
+                <br>Cairo University, Egypt
+              </li>
+              <li class="list-group-item">
+                <a href="#"><strong>Dr. Mei Chen</strong></a>, PhD			
+                <br>Editorial Board Member
+                <br>Tsinghua University, China
+              </li>
+            </ul>
+            <div class="card-footer text-right">
+              <a href="editorial-board.html">More <i class="fas fa-angle-right"></i></a>
             </div>
+          </div>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Downloads Section -->
-                <div class="footer-col">
-                    <h3>DOWNLOADS</h3>
-                    <ul class="footer-links">
-                        <li><a href="assets/uploads/certificate-form.docx">Certificate Hardcopy Form</a></li>
-                        <li><a href="assets/uploads/copyright-form.doc">Copyright Agreement Form</a></li>
-                        <li><a href="assets/uploads/paper-template.doc">Paper Template</a></li>
-                        <li><a href="assets/uploads/paper-template.doc">Manuscript Template</a></li>
-                    </ul>
-                </div>
-
-                <!-- Useful Links Section -->
-                <div class="footer-col">
-                    <h3>USEFUL LINKS</h3>
-                    <ul class="footer-links">
-                        <li><a href="pages/about.html#peer-review">Peer Review Process</a></li>
-                        <li><a href="pages/call-for-papers.html#ethics">Publishing Ethics</a></li>
-                        <li><a href="pages/faq.html">FAQ</a></li>
-                        <li><a href="pages/news.html">IJIRSES News</a></li>
-                    </ul>
-                </div>
-
-                <!-- Policies Section -->
-                <div class="footer-col">
-                    <h3>OUR POLICIES</h3>
-                    <ul class="footer-links">
-                        <li><a href="pages/refund-policy.html">Refund & Cancellation</a></li>
-                        <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="pages/terms.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Section -->
-                <div class="footer-col">
-                    <h3>CONTACT US</h3>
-                    <div class="contact-info">
-                        <img src="assets/images/logo-small.png" alt="IJIRSES" class="footer-logo">
-                        <p>IJIRSES | A Digital Library</p>
-                        <p>123 Research Park, Innovation Street<br>Bangalore, Karnataka, India - 560001</p>
-                        <p>Email: editor@ijirses.com</p>
-                        <p>Phone: +91 9876543210</p>
-                    </div>
-                    
-                    <h3>FOLLOW US</h3>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
+        
+        <!-- Indexed In -->
+        <div class="col">
+          <div class="card match-height">
+            <div class="row border-view">
+              <div class="col-lg-6 no-padding">
+                <h5 class="card-header border-0">Journal Indexed in:</h5>
+              </div>
+              <div class="col-lg-6 no-padding text-right">
+                <h5 class="card-header border-0"><a href="abstracting-indexing.html">View More &raquo;</a></h5>
+              </div>
             </div>
-
-            <!-- Copyright Section -->
-            <div class="copyright">
-                <div class="copyright-text">
-                    <p>Copyright 2025 IJIRSES | All Rights Reserved</p>
-                </div>
-                <div class="license">
-                    <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
-                        <img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License">
-                    </a>
-                    <span>This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</span>
-                </div>
+            <div class="card-body body-scroll">
+              <ul class="list-unstyled icon-list icon-list-angle-double-right">
+                <li class="my-3">Scopus</li>
+                <li class="my-3">Web of Science</li>
+                <li class="my-3">Google Scholar</li>
+                <li class="my-3">PubMed Central</li>
+                <li class="my-3">DOAJ</li>
+              </ul>
             </div>
+          </div>
         </div>
-    </footer>
-
-    <!-- Login Modal -->
-    <div class="modal" id="loginModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Login</h2>
-                <span class="close-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <form id="loginForm">
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group password-field">
-                        <input type="password" placeholder="Password" required>
-                        <button type="button" class="toggle-password">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                    <button type="submit" class="btn-login-submit">Login</button>
-                    <p class="signup-link">Don't have an account? <a href="pages/submit.html">Sign Up</a></p>
-                </form>
-            </div>
-        </div>
+      </div>
     </div>
-
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white">
+    <div class="container-fluid py-3">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-5">
+          <h5>Quick Links</h5>
+          <div class="row">
+            <div class="col">
+              <ul class="list-unstyled">
+                <li><a href="aims-scope.html" class="white">About Journal</a></li>
+                <li><a href="articles-inprocess.html" class="white">Inpress</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="list-unstyled">
+                <li><a href="submit-manuscript.html" class="white">Submit Papers</a></li>
+                <li><a href="author-guidelines.html" class="white">Author Guidelines</a></li>
+                <li><a href="editorial-board.html" class="white">Editorial Board</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="list-unstyled">
+                <li><a href="archive.html" class="white">Archive</a></li>
+                <li><a href="contact.html" class="white">Contact</a></li>
+                <li><a class="white" href="sitemap.xml">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-3">
+          <h5>Contact</h5>
+          <address>
+            <p>IJIRSES Publishing, 123 Science Avenue, London, UK</p>
+            Call: +44 20 7946 0138<br>
+            E-Mail: <a class="white" href="mailto:editorial@ijirses.org">editorial@ijirses.org</a>
+          </address>
+        </div>
+        <div class="col-12 col-sm-3">
+          <h5>Follow us</h5>
+          <nav class="nav">
+            <a href="#" target="_blank" class="nav-link white pl-0"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="nav-link white"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="nav-link white"><i class="fab fa-linkedin-in"></i></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-1 py-2">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-auto">
+            <p class="mb-0">ISSN: 2583-1234</p>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <p class="mb-0">Copyright &copy; 2026 International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scroll to Top -->
+  <a href="#0" class="cd-top js-cd-top">Top</a>
+  
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/scroll-to-top.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
