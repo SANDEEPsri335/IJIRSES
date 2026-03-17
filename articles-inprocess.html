@@ -47,4 +47,95 @@
             <p class="text-muted mb-4">Articles accepted for publication and currently in production. These articles will appear in upcoming issues.</p>
             
             <!-- Filter Bar -->
-           
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <input type="text" id="articleSearch" class="form-control" placeholder="Search articles...">
+              </div>
+              <div class="col-md-3">
+                <select class="form-control" id="issueFilter">
+                  <option value="">All Issues</option>
+                  <option>Volume 6, Issue 1</option>
+                  <option>Volume 5, Issue 4</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Articles List -->
+            <div class="row">
+              <div class="col-12 mb-3">
+                <div class="card article-card">
+                  <div class="card-body">
+                    <span class="status-badge status-accepted mb-2"><i class="fa fa-check-circle mr-1"></i> Accepted</span>
+                    <h5><a href="#" class="text-dark">Machine Learning Approaches for Predictive Analytics in Healthcare</a></h5>
+                    <p class="article-meta"><i class="fa fa-user"></i> John Smith, Maria Garcia | <i class="fa fa-calendar"></i> Accepted: March 15, 2026</p>
+                    <p class="mb-0">Expected in: Volume 6, Issue 1 (April 2026)</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 mb-3">
+                <div class="card article-card">
+                  <div class="card-body">
+                    <span class="status-badge status-accepted mb-2"><i class="fa fa-check-circle mr-1"></i> Accepted</span>
+                    <h5><a href="#" class="text-dark">Sustainable Materials for Construction: A Comprehensive Review</a></h5>
+                    <p class="article-meta"><i class="fa fa-user"></i> Ahmed Hassan, Wei Zhang | <i class="fa fa-calendar"></i> Accepted: March 10, 2026</p>
+                    <p class="mb-0">Expected in: Volume 6, Issue 1 (April 2026)</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 mb-3">
+                <div class="card article-card">
+                  <div class="card-body">
+                    <span class="status-badge status-review mb-2"><i class="fa fa-clock mr-1"></i> In Production</span>
+                    <h5><a href="#" class="text-dark">IoT-based Smart Agriculture System for Precision Farming</a></h5>
+                    <p class="article-meta"><i class="fa fa-user"></i> Priya Sharma, Michael Brown | <i class="fa fa-calendar"></i> Accepted: March 5, 2026</p>
+                    <p class="mb-0">Expected in: Volume 6, Issue 2 (May 2026)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav class="mt-4">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sidebar -->
+      <div class="col-lg-3">
+        <div class="card mb-4">
+          <h5 class="card-header">Upcoming Issues</h5>
+          <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action">Volume 6, Issue 1 (April 2026)</a>
+            <a href="#" class="list-group-item list-group-item-action">Volume 6, Issue 2 (May 2026)</a>
+            <a href="#" class="list-group-item list-group-item-action">Volume 6, Issue 3 (June 2026)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Same footer as aims-scope.html -->
+
+<script>
+$(document).ready(function() {
+  $('#articleSearch').on('keyup', function() {
+    var value = $(this).val().toLowerCase();
+    $('.article-card').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
+</script>
+</body>
+</html>
