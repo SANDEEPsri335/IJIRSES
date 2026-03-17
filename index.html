@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-    /* Additional styles for index page optimization */
+    /* Additional styles for index page */
     .hero-section {
       background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
       border-radius: 20px;
@@ -138,42 +138,36 @@
       color: var(--primary-color);
     }
     
-    .metrics-card {
+    .content-card {
       background: white;
       border-radius: 15px;
-      padding: 20px;
+      padding: 25px;
       border: 1px solid #f0f0f0;
-      margin-top: 30px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
     }
     
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      text-align: center;
+    .indexing-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
     }
     
-    .metric-item {
-      padding: 15px;
-      border-radius: 10px;
+    .indexing-badge {
       background: #f8f9fa;
+      border-radius: 30px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      border: 1px solid #e0e0e0;
     }
     
-    .metric-value {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--secondary-color);
-      line-height: 1.2;
+    .indexing-badge i {
+      color: var(--accent-color);
+      margin-right: 6px;
     }
     
-    .metric-label {
-      font-size: 0.8rem;
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .flyer-card {
+    .scholar-card {
       background: linear-gradient(135deg, var(--primary-color) 0%, #1a2632 100%);
       color: white;
       border-radius: 15px;
@@ -181,15 +175,9 @@
       margin-top: 20px;
     }
     
-    .flyer-card img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    
-    .flyer-card h5 {
+    .scholar-card i {
       color: var(--accent-color);
-      margin-bottom: 15px;
+      margin-right: 8px;
     }
     
     @media (max-width: 768px) {
@@ -201,8 +189,8 @@
         justify-content: center;
       }
       
-      .metrics-grid {
-        grid-template-columns: 1fr;
+      .journal-title {
+        text-align: center !important;
       }
     }
   </style>
@@ -238,12 +226,12 @@
       </div>
     </div>
 
-    <!-- Journal Header -->
+    <!-- Journal Header - Now Centered -->
     <div class="py-2">
       <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-12">
-            <h1 class="rockwell fweight-600 mb-0 journal-title">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="rockwell fweight-600 mb-0" style="font-size: clamp(1.2rem, 3vw, 1.8rem); color: var(--primary-color);">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
           </div>
         </div>
       </div>
@@ -280,7 +268,7 @@
   </header>
   <!-- Header End -->
 
-  <!-- Main Content - No wasted space -->
+  <!-- Main Content -->
   <div class="container-fluid py-3">
     <!-- Hero Section with Flyer -->
     <div class="hero-section">
@@ -290,9 +278,9 @@
           <p class="lead" style="font-size: 1.1rem; color: #444;"><strong>IJIRSES</strong> is a prestigious monthly open access journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>.</p>
           
           <div class="journal-stats">
-            <span class="stat-badge"><i class="fa fa-tachometer-alt"></i> ICV 2024: 92.45</span>
             <span class="stat-badge"><i class="fa fa-barcode"></i> ISSN: 2583-1658</span>
             <span class="stat-badge"><i class="fa fa-globe"></i> Open Access</span>
+            <span class="stat-badge"><i class="fa fa-calendar"></i> Monthly</span>
           </div>
         </div>
         <div class="col-lg-4 text-center">
@@ -357,15 +345,15 @@
         <div class="feature-icon">
           <i class="fa fa-chart-line"></i>
         </div>
-        <h4>High Impact</h4>
-        <p>h-index 7 with growing citations</p>
+        <h4>Growing Impact</h4>
+        <p>Increasing citations and readership</p>
       </div>
     </div>
     
-    <!-- About Content -->
+    <!-- Content Section -->
     <div class="row mt-4">
       <div class="col-lg-8">
-        <div class="metrics-card">
+        <div class="content-card">
           <p style="font-size: 1rem; line-height: 1.8;">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty.</p>
           
           <p style="font-size: 1rem; line-height: 1.8; margin-top: 20px;"><strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
@@ -378,40 +366,23 @@
       </div>
       
       <div class="col-lg-4">
-        <!-- Metrics Card -->
-        <div class="metrics-card">
-          <h5 style="color: var(--primary-color); margin-bottom: 20px;">Journal Metrics</h5>
-          <div class="metrics-grid">
-            <div class="metric-item">
-              <div class="metric-value">7</div>
-              <div class="metric-label">h-index</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-value">92.45</div>
-              <div class="metric-label">ICV 2024</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-value">5+</div>
-              <div class="metric-label">Million Readers</div>
-            </div>
-          </div>
-          
-          <hr class="my-3">
-          
-          <h6 class="mb-3">Indexed In:</h6>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> Scopus</span>
-            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> Web of Science</span>
-            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> Google Scholar</span>
-            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> PubMed</span>
+        <!-- Indexing Card -->
+        <div class="content-card">
+          <h5 style="color: var(--primary-color); margin-bottom: 20px;">Indexed In</h5>
+          <div class="indexing-badges">
+            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Scopus</span>
+            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Web of Science</span>
+            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Google Scholar</span>
+            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> PubMed</span>
+            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> DOAJ</span>
+            <span class="indexing-badge"><i class="fa fa-check-circle text-success"></i> Index Copernicus</span>
           </div>
         </div>
         
-        <!-- Google Scholar Card -->
-        <div class="flyer-card">
-          <h5><i class="fab fa-google mr-2"></i> Google Scholar</h5>
-          <p style="font-size: 0.9rem; opacity: 0.9;">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
-          <a href="#" class="btn btn-sm btn-warning mt-2"><i class="fa fa-external-link-alt mr-1"></i> View Profile</a>
+        <!-- Google Scholar Card - No button -->
+        <div class="scholar-card">
+          <h5><i class="fab fa-google"></i> Google Scholar</h5>
+          <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 15px;">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
         </div>
       </div>
     </div>
