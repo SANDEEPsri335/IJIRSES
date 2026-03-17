@@ -15,7 +15,77 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-    /* Additional styles for editorial board */
+    /* Global Styles */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #f1c40f;
+      --light-bg: #f8f9fa;
+      --dark-bg: #2c3e50;
+      --text-dark: #2c3e50;
+      --text-light: #6c757d;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+    
+    /* Header Styles */
+    .bg-1 { background-color: var(--primary-color) !important; }
+    .white { color: #fff !important; }
+    .white:hover { color: var(--accent-color) !important; text-decoration: none; }
+    
+    .bg-yellow-100 {
+      background: var(--accent-color);
+      color: var(--primary-color);
+      font-weight: 600;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+    }
+    .bg-yellow-100:hover {
+      background: #e6b800;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    .rockwell {
+      font-family: 'Spectral', serif;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    
+    /* Logo */
+    .logo-img {
+      max-height: 45px;
+      width: auto;
+      display: block;
+    }
+    
+    /* Navigation */
+    .navbar-dark .navbar-nav {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: var(--accent-color) !important;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    
+    /* Editorial Board Specific Styles */
     .editor-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -202,6 +272,86 @@
       color: var(--accent-color);
       font-size: 0.9rem;
     }
+    
+    /* Footer Styles */
+    .footer {
+      background-color: var(--dark-bg);
+      color: white;
+      padding: 40px 0 0;
+      margin-top: 50px;
+    }
+    
+    .contact-line {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-line i {
+      width: 28px;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+    
+    .footer a {
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    
+    .footer a:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    .footer h5 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    
+    /* Scroll to Top */
+    .cd-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--secondary-color);
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 45px;
+      font-size: 22px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+    
+    .cd-top--is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .cd-top:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .journal-title {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      
+      .editor-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
   
   <!-- Google tag (gtag.js) -->
@@ -374,7 +524,7 @@
         </div>
       </div>
       
-      <!-- Right Sidebar - Clean version without Journal Metrics -->
+      <!-- Right Sidebar -->
       <div class="col-lg-3">
         <!-- Journal Flyer Card -->
         <div class="sidebar-card">
@@ -385,7 +535,7 @@
             <a href="index.html">
               <img src="images/flyer.jpeg" alt="Journal Flyer" class="img-fluid" style="max-width: 100%; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);" onerror="this.src='images/flyer.jpg'">
             </a>
-            <p class="mt-3 mb-0 small text-muted">Click to download journal information</p>
+            <p class="mt-3 mb-0 small text-muted">Click to view journal information</p>
           </div>
         </div>
         
@@ -396,4 +546,79 @@
           </div>
           <div class="sidebar-card-body">
             <ul class="quick-links">
-              <li><a href="submit-manuscript.html"><i class="fa fa-paper-plane"></i> Submit Manuscript</a
+              <li><a href="submit-manuscript.html"><i class="fa fa-paper-plane"></i> Submit Manuscript</a></li>
+              <li><a href="author-guidelines.html"><i class="fa fa-file-alt"></i> Author Guidelines</a></li>
+              <li><a href="aims-scope.html"><i class="fa fa-bullseye"></i> Aims & Scope</a></li>
+              <li><a href="archive.html"><i class="fa fa-archive"></i> Journal Archive</a></li>
+              <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Start - COMPLETE AND CONNECTED -->
+  <footer class="footer bg-dark text-white">
+    <div class="container-fluid py-4">
+      <div class="row">
+        <!-- Contact -->
+        <div class="col-md-7 mb-4 mb-md-0">
+          <h5>Contact Information</h5>
+          <address class="mb-0">
+            <div class="contact-line">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>International Journal of Innovative Research in Sciences and Engineering Studies<br>5-87, Madanur, Ongole (Prakasam Dist.) Andhra Pradesh, India - 523280</span>
+            </div>
+            <div class="contact-line">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:editorijirses@gmail.com" class="white">editorijirses@gmail.com</a>
+            </div>
+          </address>
+        </div>
+        <!-- Follow Us -->
+        <div class="col-md-5">
+          <h5>Follow Us</h5>
+          <nav class="nav">
+            <a href="#" target="_blank" class="nav-link white pl-0"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="nav-link white"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="nav-link white"><i class="fab fa-linkedin-in"></i></a>
+          </nav>
+          <p class="mt-3 mb-0 small">ISSN: 2583-1658</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-1 py-2">
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <p class="mb-0 small">Copyright &copy; 2026 International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#0" class="cd-top js-cd-top"><i class="fas fa-arrow-up"></i></a>
+  <!-- Footer End -->
+  
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    // Scroll to top visibility
+    $(window).on('scroll', function(){
+      if ($(this).scrollTop() > 300) $('.cd-top').addClass('cd-top--is-visible');
+      else $('.cd-top').removeClass('cd-top--is-visible');
+    });
+    
+    // Smooth scroll to top
+    $('.cd-top').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+  </script>
+</body>
+</html>
