@@ -14,6 +14,199 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   
+  <style>
+    /* Additional styles for index page optimization */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.03);
+      border: 1px solid #f0f0f0;
+    }
+    
+    .journal-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 25px 0;
+    }
+    
+    .stat-badge {
+      background: white;
+      border-radius: 50px;
+      padding: 10px 25px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+      border: 1px solid #e0e0e0;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+    }
+    
+    .stat-badge i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .feature-item {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s;
+      border-left: 4px solid var(--accent-color);
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-5px);
+      background: white;
+      box-shadow: 0 10px 25px rgba(52, 152, 219, 0.1);
+    }
+    
+    .feature-icon {
+      width: 45px;
+      height: 45px;
+      background: rgba(52, 152, 219, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon i {
+      font-size: 22px;
+      color: var(--secondary-color);
+    }
+    
+    .feature-item h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+    }
+    
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0;
+    }
+    
+    .quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .action-btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    
+    .action-btn.primary {
+      background: var(--secondary-color);
+      color: white;
+    }
+    
+    .action-btn.primary:hover {
+      background: #2980b9;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .action-btn.secondary {
+      background: var(--accent-color);
+      color: var(--primary-color);
+    }
+    
+    .action-btn.secondary:hover {
+      background: #e6b800;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    
+    .metrics-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      border: 1px solid #f0f0f0;
+      margin-top: 30px;
+    }
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .metric-item {
+      padding: 15px;
+      border-radius: 10px;
+      background: #f8f9fa;
+    }
+    
+    .metric-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      line-height: 1.2;
+    }
+    
+    .metric-label {
+      font-size: 0.8rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .flyer-card {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a2632 100%);
+      color: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+    
+    .flyer-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .flyer-card h5 {
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 20px;
+      }
+      
+      .journal-stats {
+        justify-content: center;
+      }
+      
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENVBW9JCFM"></script>
   <script>
@@ -64,7 +257,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarJrnl">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Journal Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Journal Home</a></li>
             <li class="nav-item"><a class="nav-link" href="editorial-board.html">Editorial Board</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Author Guidelines</a>
@@ -87,60 +280,141 @@
   </header>
   <!-- Header End -->
 
-  <!-- Main Content -->
+  <!-- Main Content - No wasted space -->
   <div class="container-fluid py-3">
-    <div class="row">
-      <!-- Left column (empty for spacing) -->
-      <div class="col-12 col-sm-2"></div>
-      
-      <!-- Center Content -->
-      <div class="col-12 col-sm">
-        <div class="card rounded-0 border-0 shadow-sm">
-          <div class="card-body">
-            <!-- Row with text and flyer -->
-            <div class="row align-items-start">
-              <div class="col-md-8">
-                <h3 class="mb-3" style="color:var(--primary-color); font-weight:600;">About the Journal</h3>
-                <p class="lead" style="font-size:1rem"><strong>IJIRSES</strong> is a prestigious monthly open access journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>. Our mission is to accelerate discovery by providing a rigorous yet rapid peer-review process and immediate, worldwide visibility.</p>
-              </div>
-              <div class="col-md-4 text-center text-md-right">
-                <!-- Flyer -->
-                <a href="index.html">
-                  <img src="images/flyer.jpeg" alt="Journal Flyer" class="flyer-img" onerror="this.src='images/flyer.jpg'">
-                </a>
-              </div>
-            </div>
-            
-            <!-- Feature list -->
-            <div class="row mt-2">
-              <div class="col-md-6">
-                <ul class="feature-list">
-                  <li><strong>Rapid publication:</strong> average 3–5 days from acceptance to publication</li>
-                  <li><strong>High visibility:</strong> articles indexed in leading databases</li>
-                  <li><strong>Constructive peer review</strong> with at least two independent experts</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <ul class="feature-list">
-                  <li><strong>Multidisciplinary:</strong> engineering, technology, natural sciences</li>
-                  <li><strong>Creative Commons licensing</strong> – share and adapt with credit</li>
-                </ul>
-              </div>
-            </div>
-            
-            <p class="mt-2" style="font-size:0.95rem">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty. <strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
-            
-            <p class="mb-0"><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
+    <!-- Hero Section with Flyer -->
+    <div class="hero-section">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2 style="color: var(--primary-color); font-weight: 700; margin-bottom: 15px;">About the Journal</h2>
+          <p class="lead" style="font-size: 1.1rem; color: #444;"><strong>IJIRSES</strong> is a prestigious monthly open access journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>.</p>
+          
+          <div class="journal-stats">
+            <span class="stat-badge"><i class="fa fa-tachometer-alt"></i> ICV 2024: 92.45</span>
+            <span class="stat-badge"><i class="fa fa-barcode"></i> ISSN: 2583-1658</span>
+            <span class="stat-badge"><i class="fa fa-globe"></i> Open Access</span>
           </div>
+        </div>
+        <div class="col-lg-4 text-center">
+          <a href="index.html">
+            <img src="images/flyer.jpeg" alt="Journal Flyer" style="max-width: 180px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" onerror="this.src='images/flyer.jpg'">
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Google Scholar Banner -->
-  <div class="scholar-banner">
-    <i class="fas fa-graduation-cap"></i>
-    <strong>Google Scholar</strong> — IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.
+    
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <a href="submit-manuscript.html" class="action-btn primary"><i class="fa fa-paper-plane mr-2"></i> Submit Manuscript</a>
+      <a href="author-guidelines.html" class="action-btn secondary"><i class="fa fa-file-alt mr-2"></i> Author Guidelines</a>
+      <a href="archive.html" class="action-btn secondary"><i class="fa fa-archive mr-2"></i> View Archive</a>
+    </div>
+    
+    <!-- Features Grid -->
+    <h3 style="color: var(--primary-color); margin: 30px 0 20px;">Journal Highlights</h3>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fa fa-rocket"></i>
+        </div>
+        <h4>Rapid Publication</h4>
+        <p>Average 3–5 days from acceptance to publication</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fa fa-eye"></i>
+        </div>
+        <h4>High Visibility</h4>
+        <p>Articles indexed in leading databases worldwide</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fa fa-users"></i>
+        </div>
+        <h4>Peer Review</h4>
+        <p>Constructive review with at least two independent experts</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fa fa-flask"></i>
+        </div>
+        <h4>Multidisciplinary</h4>
+        <p>Engineering, technology, natural sciences</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fa fa-creative-commons"></i>
+        </div>
+        <h4>Creative Commons</h4>
+        <p>Share and adapt with proper credit</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fa fa-chart-line"></i>
+        </div>
+        <h4>High Impact</h4>
+        <p>h-index 7 with growing citations</p>
+      </div>
+    </div>
+    
+    <!-- About Content -->
+    <div class="row mt-4">
+      <div class="col-lg-8">
+        <div class="metrics-card">
+          <p style="font-size: 1rem; line-height: 1.8;">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty.</p>
+          
+          <p style="font-size: 1rem; line-height: 1.8; margin-top: 20px;"><strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
+          
+          <div class="text-center mt-4">
+            <i class="fas fa-quote-left" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+            <p class="font-italic" style="color: #555;">We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <!-- Metrics Card -->
+        <div class="metrics-card">
+          <h5 style="color: var(--primary-color); margin-bottom: 20px;">Journal Metrics</h5>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-value">7</div>
+              <div class="metric-label">h-index</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">92.45</div>
+              <div class="metric-label">ICV 2024</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">5+</div>
+              <div class="metric-label">Million Readers</div>
+            </div>
+          </div>
+          
+          <hr class="my-3">
+          
+          <h6 class="mb-3">Indexed In:</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> Scopus</span>
+            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> Web of Science</span>
+            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> Google Scholar</span>
+            <span class="badge badge-light p-2 m-1"><i class="fa fa-check-circle text-success mr-1"></i> PubMed</span>
+          </div>
+        </div>
+        
+        <!-- Google Scholar Card -->
+        <div class="flyer-card">
+          <h5><i class="fab fa-google mr-2"></i> Google Scholar</h5>
+          <p style="font-size: 0.9rem; opacity: 0.9;">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
+          <a href="#" class="btn btn-sm btn-warning mt-2"><i class="fa fa-external-link-alt mr-1"></i> View Profile</a>
+        </div>
+      </div>
+    </div>
   </div>
   
   <!-- Footer Start -->
@@ -186,7 +460,6 @@
 
   <!-- Scroll to Top -->
   <a href="#0" class="cd-top js-cd-top">Top</a>
-  <!-- Footer End -->
   
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -198,17 +471,6 @@
     $(window).on('scroll', function(){
       if ($(this).scrollTop() > 300) $('.cd-top').addClass('cd-top--is-visible');
       else $('.cd-top').removeClass('cd-top--is-visible');
-    });
-    
-    // Set active class based on current page
-    $(document).ready(function() {
-      var currentPage = window.location.pathname.split('/').pop();
-      $('.navbar-nav .nav-link').each(function() {
-        var linkPage = $(this).attr('href');
-        if (currentPage === linkPage) {
-          $(this).addClass('active');
-        }
-      });
     });
   </script>
 </body>
