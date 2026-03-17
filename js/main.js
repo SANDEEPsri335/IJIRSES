@@ -3,6 +3,7 @@
 $(document).ready(function() {
   // Set active class in navigation based on current page
   var currentPage = window.location.pathname.split('/').pop();
+  if (currentPage === '') currentPage = 'index.html';
   
   $('.navbar-nav .nav-link').each(function() {
     var linkPage = $(this).attr('href');
@@ -11,10 +12,12 @@ $(document).ready(function() {
     }
   });
   
-  // Initialize popovers if any
-  $('[data-toggle="popover"]').popover({
-    trigger: 'hover',
-    placement: 'auto'
+  // Handle dropdown toggle on mobile
+  $('.dropdown-toggle').click(function(e) {
+    if ($(window).width() < 992) {
+      e.preventDefault();
+      $(this).next('.dropdown-menu').toggle();
+    }
   });
 });
 
