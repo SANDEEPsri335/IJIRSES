@@ -179,7 +179,7 @@
       text-decoration: none;
     }
     
-    /* Feature Grid */
+    /* Feature Grid - Now with only 5 items */
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -246,59 +246,18 @@
       font-size: 1.1rem;
       line-height: 1.9;
       color: var(--text-dark);
-      margin-bottom: 25px;
+      margin-bottom: 0;
       position: relative;
       padding-left: 25px;
       border-left: 4px solid var(--accent-color);
     }
     
-    .invitation-box {
-      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-      border-radius: 20px;
-      padding: 35px;
-      text-align: center;
-      border: 2px dashed var(--accent-color);
-      margin-top: 30px;
-    }
-    
-    .invitation-box i {
-      font-size: 3rem;
-      color: var(--accent-color);
+    .description-text p {
       margin-bottom: 20px;
-      opacity: 0.8;
     }
     
-    .invitation-box h3 {
-      color: var(--primary-color);
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    
-    .invitation-box p {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      max-width: 800px;
-      margin: 0 auto 25px;
-    }
-    
-    .invitation-btn {
-      display: inline-block;
-      background: var(--secondary-color);
-      color: white;
-      padding: 12px 35px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
-    }
-    
-    .invitation-btn:hover {
-      background: #2980b9;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
-      color: white;
-      text-decoration: none;
+    .description-text p:last-child {
+      margin-bottom: 0;
     }
     
     /* Google Scholar Card */
@@ -406,13 +365,13 @@
         padding: 25px;
       }
       
-      .invitation-box {
-        padding: 25px;
-      }
-      
       .journal-title {
         font-size: 1.3rem;
         text-align: center;
+      }
+      
+      .feature-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -522,7 +481,7 @@
       <a href="aims-scope.html" class="action-btn secondary"><i class="fa fa-bullseye mr-2"></i> Aims & Scope</a>
     </div>
     
-    <!-- Features Grid -->
+    <!-- Features Grid - "Global Recognition" removed, now only 5 items -->
     <h3 style="color: var(--primary-color); font-weight: 700; margin: 40px 0 25px; text-align: center;">Journal Highlights</h3>
     <div class="feature-grid">
       <div class="feature-item">
@@ -564,32 +523,16 @@
         <h4>Open Access</h4>
         <p>Creative Commons licensing allows authors to share and adapt their work with proper credit.</p>
       </div>
-      
-      <div class="feature-item">
-        <div class="feature-icon">
-          <i class="fa fa-trophy"></i>
-        </div>
-        <h4>Global Recognition</h4>
-        <p>International editorial board and diverse readership spanning over 80 countries worldwide.</p>
-      </div>
     </div>
     
-    <!-- Beautiful Description Card - Your text enhanced -->
+    <!-- Beautiful Description Card - Your exact text, no invitation box -->
     <div class="description-card">
       <div class="description-text">
-        <p style="margin-bottom: 25px;">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty.</p>
+        <p>The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty.</p>
         
-        <p style="margin-bottom: 0;"><strong style="color: var(--secondary-color);">IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
-      </div>
-      
-      <!-- Invitation Box -->
-      <div class="invitation-box">
-        <i class="fas fa-quote-right"></i>
-        <h3>Join Our Community of Thought Leaders</h3>
-        <p>We invite researchers, scientists, and practitioners to submit their innovative work and be part of a growing platform dedicated to advancing scientific knowledge and technological innovation.</p>
-        <a href="submit-manuscript.html" class="invitation-btn">
-          <i class="fa fa-pencil-alt mr-2"></i> Submit Your Research
-        </a>
+        <p><strong style="color: var(--secondary-color);">IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
+        
+        <p>We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
       </div>
     </div>
     
