@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- consolidated local styles: style.css + responsive.css (minified for brevity, full content included) -->
+  <!-- consolidated local styles -->
   <style>
     /* style.css (consolidated) */
     :root{--primary-color:#2c3e50;--secondary-color:#3498db;--accent-color:#f1c40f;--light-bg:#ecf0f1;--dark-bg:#2c3e50;--text-dark:#333;--text-light:#fff;--border-radius:20px}
@@ -58,41 +58,28 @@
     .cd-top{position:fixed;bottom:30px;right:30px;background:var(--secondary-color);color:white;width:40px;height:40px;border-radius:50%;text-align:center;line-height:40px;font-size:20px;opacity:0;visibility:hidden;transition:all 0.3s;z-index:1000}
     .cd-top--is-visible{opacity:1;visibility:visible}
     .cd-top:hover{background:var(--primary-color);color:white;text-decoration:none}
-    .form-control:focus{border-color:var(--secondary-color);box-shadow:0 0 0 0.2rem rgba(52,152,219,0.25)}
-    .btn-primary{background-color:var(--secondary-color);border-color:var(--secondary-color)}
-    .btn-primary:hover{background-color:#2980b9;border-color:#2980b9}
-    .table-responsive{border-radius:8px;overflow:hidden}
-    .table thead th{background-color:var(--primary-color);color:white;border:none}
-    .article-card{transition:transform 0.3s;height:100%}
-    .article-card:hover{transform:translateY(-5px);box-shadow:0 5px 20px rgba(0,0,0,0.1)}
-    .article-meta{color:#666;font-size:14px;margin-bottom:10px}
-    .article-meta i{margin-right:5px;color:var(--secondary-color)}
-    .pagination .page-link{color:var(--primary-color);border:1px solid #ddd}
-    .pagination .page-item.active .page-link{background-color:var(--secondary-color);border-color:var(--secondary-color);color:white}
-    .pagination .page-link:hover{background-color:var(--light-bg);color:var(--primary-color)}
-    /* responsive.css consolidated */
-    @media (min-width: 992px){.container-fluid{padding-left:30px;padding-right:30px}}
-    @media (max-width: 991px){h1.rockwell{font-size:24px}.navbar-nav{padding:10px 0}.dropdown-menu{background-color:rgba(255,255,255,0.1);border:none}.dropdown-item{color:white}.dropdown-item:hover{background-color:rgba(255,255,255,0.2);color:var(--accent-color)}}
-    @media (max-width: 767px){h1.rockwell{font-size:20px}.bg-1 .nav{flex-wrap:wrap;justify-content:center}.bg-1 .nav-link{padding:5px 10px;font-size:14px}.btn.bg-yellow-100{padding:5px 10px;font-size:14px;margin:5px 0}.journal-highlight-list li{font-size:14px}.card-body{padding:15px}.footer .row > div{margin-bottom:30px}}
-    @media (max-width: 575px){h1.rockwell{font-size:18px}.bg-1 .row{flex-direction:column;text-align:center}.bg-1 .nav{justify-content:center}.multi_lang{display:none!important}.table-responsive{font-size:14px}.pagination{flex-wrap:wrap;justify-content:center}.pagination .page-link{padding:5px 10px;font-size:12px}}
-    @media print{header,footer,.cd-top,.btn,.navbar{display:none!important}body{background:white;font-size:12pt}.container-fluid{width:100%;padding:0}.card{border:1px solid #ddd;box-shadow:none}}
-    /* custom additions for tight header and fixed flyer */
+    /* custom additions */
     .journal-title{font-size:clamp(1.1rem, 2.5vw, 1.8rem);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;padding-right:10px}
     .logo-fixed{max-height:45px;width:auto;display:block}
-    .flyer-fixed{max-width:180px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:1rem}
-    .bg-1 .nav-link.white i.fa-whatsapp{display:none} /* hide whatsapp icon */
-    .no-mobile{display:inline-block}
-    .btn-outline-accent{background:transparent;border:2px solid var(--accent-color);color:var(--accent-color);font-weight:600;padding:0.4rem 1.2rem;border-radius:30px;transition:0.2s}
-    .btn-outline-accent:hover{background:var(--accent-color);color:var(--primary-color);text-decoration:none}
-    .highlight-badge{background:#fef8e7;border-left:5px solid var(--secondary-color);padding:1.2rem;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,0.03);margin-bottom:1.5rem}
-    .metric-badge{display:inline-block;background:white;padding:0.5rem 1.2rem;border-radius:40px;font-weight:600;margin-right:1rem;margin-bottom:0.8rem;box-shadow:0 2px 6px rgba(0,0,0,0.03);border:1px solid #e9ecef}
-    .metric-badge i{color:var(--secondary-color);margin-right:6px}
+    .flyer-fixed{max-width:160px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:1rem;cursor:pointer;transition:opacity 0.2s}
+    .flyer-fixed:hover{opacity:0.8}
+    .bg-1 .nav-link.white i.fa-whatsapp{display:none}
+    /* center nav on desktop */
+    @media (min-width: 992px) {
+      .navbar .navbar-collapse { justify-content: center !important; }
+      .navbar-nav { margin: 0 auto; }
+    }
+    /* hide language dropdown entirely */
+    .multi_lang { display: none !important; }
+    /* metric badges removed — not displayed */
+    .highlight-badge .metric-badge { display: none; }
+    /* contact line style */
+    .contact-line{display:flex;align-items:center;margin-bottom:0.8rem}
+    .contact-line i{width:28px;color:var(--accent-color);font-size:1.2rem}
+    /* keep about section clean */
     .list-modern{list-style:none;padding-left:0}
     .list-modern li{margin-bottom:0.8rem;padding-left:1.8rem;position:relative}
     .list-modern li:before{content:"\f00c";font-family:'Font Awesome 5 Free';font-weight:900;position:absolute;left:0;color:var(--accent-color);font-size:0.9rem}
-    .contact-line{display:flex;align-items:center;margin-bottom:0.8rem}
-    .contact-line i{width:28px;color:var(--accent-color);font-size:1.2rem}
-    .footer .nav-link{padding-left:0!important;padding-right:1rem!important}
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENVBW9JCFM"></script>
@@ -104,11 +91,9 @@
   </script>
 </head>
 <body>
-  <!-- GET THE APP removed per request (entire #target element removed) -->
-
   <!-- Header -->
   <header>
-    <!-- Topbar (phone number removed, language hidden via CSS on small) -->
+    <!-- Topbar: language removed, phone removed, only email and submit button -->
     <div class="bg-1">
       <div class="container-fluid py-1">
         <div class="row justify-content-between align-items-center">
@@ -117,21 +102,9 @@
           </div>
           <div class="col-sm-auto">
             <nav class="nav">
-              <!-- phone removed -->
-              <!-- <a class="nav-link white"><i class="fa fa-whatsapp"></i> +447723860698</a> -->
               <a href="mailto:editorijirses@gmail.com" class="nav-link white"><i class="fas fa-envelope-square"></i> editorijirses@gmail.com</a>
               <a href="submit-manuscript.html" title="Submit Manuscript" class="btn bg-yellow-100">Submit Manuscript</a>
-              
-              <!-- Language dropdown (hidden on mobile via CSS, but still in code) -->
-              <div class="nav-item dropdown multi_lang j_multi_lang">
-                <a class="nav-link dropdown-toggle" href="#" id="multi_lang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
-                <div class="dropdown-menu" aria-labelledby="multi_lang">
-                  <a class="dropdown-item" href="#"><img src="images/flags/spain.png" alt=""> Spanish</a>
-                  <a class="dropdown-item" href="#"><img src="images/flags/china.png" alt=""> Chinese</a>
-                  <a class="dropdown-item" href="#"><img src="images/flags/france.png" alt=""> French</a>
-                  <a class="dropdown-item" href="#"><img src="images/flags/germany.png" alt=""> German</a>
-                </div>
-              </div>
+              <!-- language dropdown removed from markup (hidden via CSS) -->
             </nav>
           </div>
         </div>
@@ -149,13 +122,13 @@
       </div>
     </div>
     
-    <!-- Navigation -->
+    <!-- Navigation (now centered on desktop) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-1">
       <a class="navbar-brand d-none" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarJrnl" aria-controls="navbarJrnl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarJrnl">
+      <div class="collapse navbar-collapse" id="navbarJrnl">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Journal Home</a></li>
           <li class="nav-item"><a class="nav-link" href="editorial-board.html">Editorial Board</a></li>
@@ -181,40 +154,25 @@
   <!-- Main Content -->
   <div class="container-fluid py-3">
     <div class="row">
-      <!-- Left Sidebar (flyer fixed size, no citation numbers) -->
+      <!-- Left Sidebar (only flyer, clickable to index) -->
       <div class="col-12 col-sm-2">
-        <!-- awards nomination & readerbase (kept as is) -->
-        <a href="awards-nomination.html" class="btn btn-info btn-block mb-3 border-0 border-left-4 border-info font-size-4 awards_link">
-          <i class="fa-light fa-award-simple"></i> Awards Nomination
+        <!-- Awards and 5+ Million buttons removed -->
+        <!-- flyer: clicking goes to index.html -->
+        <a href="index.html">
+          <img src="images/journal-flyer.jpg" alt="Flyer" class="flyer-fixed w-100">
         </a>
-        
-        <a href="#" class="btn btn-warning btn-block mb-3 border-0 border-left-4 border-info font-size-4">
-          <i class="fas fa-book-reader"></i> 5+ Million Readerbase
-        </a>
-        
-        <!-- flyer fixed size (removed Google scholar & citations) -->
-        <img src="images/journal-flyer.jpg" alt="Flyer" class="flyer-fixed w-100">
-        <br/><br/>
-        
-        <!-- removed all Google scholar / citation blocks -->
-        <!-- left just the card if any? we keep minimal -->
+        <!-- nothing else -->
       </div>
       
-      <!-- Center Content (revised about section) -->
+      <!-- Center Content (about section, without ICV/NLM badges) -->
       <div class="col-12 col-sm">
         <div class="card rounded-0 border-0 shadow-sm">
           <div class="card-body">
             <h3 class="mb-4" style="color:var(--primary-color); font-weight:600;">About the Journal</h3>
             
-            <!-- New attractive metrics / highlights (ICV, NLM removed; replaced by concise badges) -->
-            <div class="highlight-badge d-flex flex-wrap align-items-center">
-              <span class="metric-badge"><i class="fas fa-tachometer-alt"></i> Index Copernicus 2024: 92.45</span>
-              <span class="metric-badge"><i class="fas fa-barcode"></i> NLM ID: 1023456789</span>
-              <span class="metric-badge"><i class="fas fa-globe"></i> Open access · monthly</span>
-              <span class="metric-badge"><i class="fas fa-check-circle"></i> Peer-reviewed</span>
-            </div>
+            <!-- ICV and NLM badges completely removed; no highlight-badge with metrics -->
             
-            <!-- concise, professional, attractive description with key highlights -->
+            <!-- concise, professional description -->
             <p class="lead"><strong>IJIRSES</strong> is a prestigious <span class="font-weight-bold">monthly open access</span> journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>. Our mission is to accelerate discovery by providing a rigorous yet rapid peer-review process and immediate, worldwide visibility.</p>
             
             <div class="row mt-4">
@@ -241,88 +199,40 @@
             <p>The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty. <strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
             
             <p class="mb-0"><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
-            
-            <!-- removed h-index section completely -->
           </div>
         </div>
-        
-        <!-- h-index section removed as requested -->
       </div>
     </div>
   </div>
   
-  <!-- Bottom Sections (editorial board replaced with only Google Scholar block; Indexed In simplified) -->
+  <!-- Bottom Sections: only Google Scholar block remains (Indexed In removed) -->
   <section class="bg-grey-300 py-5">
     <div class="container-fluid">
-      <div class="row">
-        <!-- Editorial Board replaced with "Google Scholar" attractive block -->
-        <div class="col-md-6 mb-3">
-          <div class="card rounded-0 h-100 border-0 shadow-sm">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <!-- Google Scholar attractive block (kept) -->
+          <div class="card rounded-0 border-0 shadow-sm">
             <div class="card-header bg-primary text-white">
               <h5 class="mb-0"><i class="fas fa-graduation-cap mr-2"></i> Google Scholar</h5>
             </div>
             <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
               <p class="card-text text-center">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
-              <a href="https://scholar.google.com/citations?user=ijirses" target="_blank" class="btn btn-outline-accent mt-2">Visit Google Scholar Profile →</a>
+              <a href="https://scholar.google.com/citations?user=ijirses" target="_blank" class="btn btn-outline-warning mt-2">Visit Google Scholar Profile →</a>
             </div>
           </div>
         </div>
-        
-        <!-- Indexed In (simplified, removed "View More" link, kept concise list) -->
-        <div class="col-md-6 mb-3">
-          <div class="card rounded-0 h-100 border-0 shadow-sm">
-            <div class="card-header bg-primary text-white">
-              <h5 class="mb-0"><i class="fas fa-database mr-2"></i> Indexed In</h5>
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled icon-list icon-list-angle-double-right row">
-                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Scopus</li>
-                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Web of Science</li>
-                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Google Scholar</li>
-                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> PubMed Central</li>
-                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> DOAJ</li>
-                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Index Copernicus</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <!-- Indexed In block completely removed -->
       </div>
     </div>
   </section>
   
-  <!-- Footer (updated contact info, address, quick links, no phone) -->
+  <!-- Footer (updated: quick links removed, only contact and socials + copyright) -->
   <footer class="footer bg-dark text-white">
     <div class="container-fluid py-4">
       <div class="row">
-        <!-- Quick Links (customized as requested) -->
-        <div class="col-12 col-sm-5">
-          <h5>Quick Links</h5>
-          <div class="row">
-            <div class="col">
-              <ul class="list-unstyled">
-                <li><a href="aims-scope.html" class="white">About Journal</a></li>
-                <li><a href="articles-inprocess.html" class="white">Inpress</a></li>
-                <li><a href="submit-manuscript.html" class="white">Submit Papers</a></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul class="list-unstyled">
-                <li><a href="author-guidelines.html" class="white">Author Guidelines</a></li>
-                <li><a href="editorial-board.html" class="white">Editorial Board</a></li>
-                <li><a href="archive.html" class="white">Archive</a></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul class="list-unstyled">
-                <li><a href="contact.html" class="white">Contact</a></li>
-                <li><a class="white" href="sitemap.xml">Sitemap</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Contact (updated address and email only) -->
-        <div class="col-12 col-sm-4">
+        <!-- Contact (full address and email only) -->
+        <div class="col-md-7 mb-4 mb-md-0">
           <h5>Contact</h5>
           <address class="mb-0">
             <div class="contact-line"><i class="fas fa-map-marker-alt"></i> International Journal of Innovative Research in Sciences and Engineering Studies<br>5-87, Madanur, Ongole (Prakasam Dist.)<br>Andhra Pradesh, India, PIN-523280</div>
@@ -330,7 +240,7 @@
           </address>
         </div>
         <!-- Follow us (social) -->
-        <div class="col-12 col-sm-3">
+        <div class="col-md-5">
           <h5>Follow us</h5>
           <nav class="nav">
             <a href="#" target="_blank" class="nav-link white pl-0"><i class="fab fa-facebook-f"></i></a>
@@ -342,7 +252,7 @@
         </div>
       </div>
     </div>
-    <!-- Copyright line (adjusted year) -->
+    <!-- Copyright line (no quick links) -->
     <div class="bg-1 py-2">
       <div class="container-fluid">
         <div class="row justify-content-center text-center">
@@ -361,14 +271,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="js/scroll-to-top.js"></script>
-  <script src="js/main.js"></script>
   <script>
-    // simple scroll to top visibility (if js is present)
+    // simple scroll to top visibility
     $(window).on('scroll', function(){
       if ($(this).scrollTop() > 300) $('.cd-top').addClass('cd-top--is-visible');
       else $('.cd-top').removeClass('cd-top--is-visible');
     });
+    // Optional: if you have separate js files, they would work; but we include minimal.
   </script>
 </body>
 </html>
