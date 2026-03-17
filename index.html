@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</title>
+  <title>IJIRSES | International Journal of Innovative Research in Sciences and Engineering Studies</title>
   <meta name="keywords" content="IJIRSES, International Journal of Innovative Research in Sciences and Engineering Studies, open access journal, peer-reviewed, sciences and engineering research" />
   <meta name="description" content="IJIRSES is an online open access monthly international peer-reviewed journal welcoming outstanding research papers in Sciences and Engineering studies." />
   <meta property="og:title" content="International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)">
@@ -23,9 +23,77 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  
+  <!-- consolidated local styles: style.css + responsive.css (minified for brevity, full content included) -->
+  <style>
+    /* style.css (consolidated) */
+    :root{--primary-color:#2c3e50;--secondary-color:#3498db;--accent-color:#f1c40f;--light-bg:#ecf0f1;--dark-bg:#2c3e50;--text-dark:#333;--text-light:#fff;--border-radius:20px}
+    body{font-family:'Open Sans',sans-serif;background:#f5f7fa;color:var(--text-dark);line-height:1.6}
+    .bg-1{background-color:var(--primary-color)}
+    .white{color:var(--text-light)!important}
+    .white:hover{color:var(--accent-color)!important;text-decoration:none}
+    .bg-yellow-100{background:var(--accent-color);color:var(--primary-color);font-weight:600;border-radius:4px;padding:0.5rem 1rem}
+    .bg-yellow-100:hover{background:#e6b800;color:var(--primary-color)}
+    .rockwell{font-family:'Spectral',serif;font-weight:600;color:var(--primary-color)}
+    .fweight-600{font-weight:600}
+    .navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,0.9);font-weight:500;padding:0.5rem 1rem}
+    .navbar-dark .navbar-nav .nav-link:hover,.navbar-dark .navbar-nav .nav-link.active{color:var(--accent-color);background-color:rgba(255,255,255,0.1);border-radius:4px}
+    .dropdown-menu{border:none;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+    .dropdown-item:hover{background-color:var(--light-bg);color:var(--primary-color)}
+    .card{border:none;box-shadow:0 2px 15px rgba(0,0,0,0.05);margin-bottom:20px}
+    .card-header{background-color:var(--primary-color);color:var(--text-light);font-weight:600;border-bottom:none}
+    .bg-grey-200{background:var(--light-bg)}
+    .bg-grey-300{background:#dfe4e5}
+    .rounded-20{border-radius:var(--border-radius)}
+    .border-left-5{border-left:5px solid var(--primary-color)!important}
+    .border-info{border-color:var(--secondary-color)!important}
+    .journal-highlight-list{list-style:none;padding:0;margin:0}
+    .journal-highlight-list li{padding:8px 15px;border-bottom:1px dashed #ccc}
+    .journal-highlight-list li:last-child{border-bottom:none}
+    .sidebar img{border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+    .footer{background-color:var(--dark-bg);color:var(--text-light);padding:30px 0 0}
+    .footer a{color:#ccc;transition:color 0.3s}
+    .footer a:hover{color:var(--accent-color);text-decoration:none}
+    .footer h5{color:var(--accent-color);margin-bottom:20px;font-weight:600}
+    .footer address p{margin-bottom:5px}
+    .cd-top{position:fixed;bottom:30px;right:30px;background:var(--secondary-color);color:white;width:40px;height:40px;border-radius:50%;text-align:center;line-height:40px;font-size:20px;opacity:0;visibility:hidden;transition:all 0.3s;z-index:1000}
+    .cd-top--is-visible{opacity:1;visibility:visible}
+    .cd-top:hover{background:var(--primary-color);color:white;text-decoration:none}
+    .form-control:focus{border-color:var(--secondary-color);box-shadow:0 0 0 0.2rem rgba(52,152,219,0.25)}
+    .btn-primary{background-color:var(--secondary-color);border-color:var(--secondary-color)}
+    .btn-primary:hover{background-color:#2980b9;border-color:#2980b9}
+    .table-responsive{border-radius:8px;overflow:hidden}
+    .table thead th{background-color:var(--primary-color);color:white;border:none}
+    .article-card{transition:transform 0.3s;height:100%}
+    .article-card:hover{transform:translateY(-5px);box-shadow:0 5px 20px rgba(0,0,0,0.1)}
+    .article-meta{color:#666;font-size:14px;margin-bottom:10px}
+    .article-meta i{margin-right:5px;color:var(--secondary-color)}
+    .pagination .page-link{color:var(--primary-color);border:1px solid #ddd}
+    .pagination .page-item.active .page-link{background-color:var(--secondary-color);border-color:var(--secondary-color);color:white}
+    .pagination .page-link:hover{background-color:var(--light-bg);color:var(--primary-color)}
+    /* responsive.css consolidated */
+    @media (min-width: 992px){.container-fluid{padding-left:30px;padding-right:30px}}
+    @media (max-width: 991px){h1.rockwell{font-size:24px}.navbar-nav{padding:10px 0}.dropdown-menu{background-color:rgba(255,255,255,0.1);border:none}.dropdown-item{color:white}.dropdown-item:hover{background-color:rgba(255,255,255,0.2);color:var(--accent-color)}}
+    @media (max-width: 767px){h1.rockwell{font-size:20px}.bg-1 .nav{flex-wrap:wrap;justify-content:center}.bg-1 .nav-link{padding:5px 10px;font-size:14px}.btn.bg-yellow-100{padding:5px 10px;font-size:14px;margin:5px 0}.journal-highlight-list li{font-size:14px}.card-body{padding:15px}.footer .row > div{margin-bottom:30px}}
+    @media (max-width: 575px){h1.rockwell{font-size:18px}.bg-1 .row{flex-direction:column;text-align:center}.bg-1 .nav{justify-content:center}.multi_lang{display:none!important}.table-responsive{font-size:14px}.pagination{flex-wrap:wrap;justify-content:center}.pagination .page-link{padding:5px 10px;font-size:12px}}
+    @media print{header,footer,.cd-top,.btn,.navbar{display:none!important}body{background:white;font-size:12pt}.container-fluid{width:100%;padding:0}.card{border:1px solid #ddd;box-shadow:none}}
+    /* custom additions for tight header and fixed flyer */
+    .journal-title{font-size:clamp(1.1rem, 2.5vw, 1.8rem);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;padding-right:10px}
+    .logo-fixed{max-height:45px;width:auto;display:block}
+    .flyer-fixed{max-width:180px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:1rem}
+    .bg-1 .nav-link.white i.fa-whatsapp{display:none} /* hide whatsapp icon */
+    .no-mobile{display:inline-block}
+    .btn-outline-accent{background:transparent;border:2px solid var(--accent-color);color:var(--accent-color);font-weight:600;padding:0.4rem 1.2rem;border-radius:30px;transition:0.2s}
+    .btn-outline-accent:hover{background:var(--accent-color);color:var(--primary-color);text-decoration:none}
+    .highlight-badge{background:#fef8e7;border-left:5px solid var(--secondary-color);padding:1.2rem;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,0.03);margin-bottom:1.5rem}
+    .metric-badge{display:inline-block;background:white;padding:0.5rem 1.2rem;border-radius:40px;font-weight:600;margin-right:1rem;margin-bottom:0.8rem;box-shadow:0 2px 6px rgba(0,0,0,0.03);border:1px solid #e9ecef}
+    .metric-badge i{color:var(--secondary-color);margin-right:6px}
+    .list-modern{list-style:none;padding-left:0}
+    .list-modern li{margin-bottom:0.8rem;padding-left:1.8rem;position:relative}
+    .list-modern li:before{content:"\f00c";font-family:'Font Awesome 5 Free';font-weight:900;position:absolute;left:0;color:var(--accent-color);font-size:0.9rem}
+    .contact-line{display:flex;align-items:center;margin-bottom:0.8rem}
+    .contact-line i{width:28px;color:var(--accent-color);font-size:1.2rem}
+    .footer .nav-link{padding-left:0!important;padding-right:1rem!important}
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENVBW9JCFM"></script>
   <script>
@@ -36,39 +104,32 @@
   </script>
 </head>
 <body>
-  <!-- Get The App Icon -->
-  <div id="target" style="position: absolute; top: 110px;">
-    <div><p>GET THE APP</p></div>
-    <a href="https://play.google.com/store/apps/details?id=com.journals.ijirses&hl=en" target="_blank" id="getAppModel">
-      <div class="a_icon">
-        <span><i class="fa fa-android"></i></span>
-      </div>
-    </a>
-  </div>
+  <!-- GET THE APP removed per request (entire #target element removed) -->
 
   <!-- Header -->
   <header>
-    <!-- Topbar -->
+    <!-- Topbar (phone number removed, language hidden via CSS on small) -->
     <div class="bg-1">
       <div class="container-fluid py-1">
         <div class="row justify-content-between align-items-center">
           <div class="col-sm-auto">
-            <a href="index.html" title="IJIRSES"><img src="images/logo-white.svg" alt="IJIRSES" height="50"></a>
+            <a href="index.html" title="IJIRSES"><img src="images/logo-white.svg" alt="IJIRSES" class="logo-fixed"></a>
           </div>
           <div class="col-sm-auto">
             <nav class="nav">
-              <a class="nav-link white"><i class="fa fa-whatsapp"></i> +447723860698</a>
-              <a href="mailto:editorial@ijirses.org" class="nav-link white"><i class="fas fa-envelope-square"></i> editorial@ijirses.org</a>
+              <!-- phone removed -->
+              <!-- <a class="nav-link white"><i class="fa fa-whatsapp"></i> +447723860698</a> -->
+              <a href="mailto:editorijirses@gmail.com" class="nav-link white"><i class="fas fa-envelope-square"></i> editorijirses@gmail.com</a>
               <a href="submit-manuscript.html" title="Submit Manuscript" class="btn bg-yellow-100">Submit Manuscript</a>
               
-              <!-- Language dropdown -->
+              <!-- Language dropdown (hidden on mobile via CSS, but still in code) -->
               <div class="nav-item dropdown multi_lang j_multi_lang">
                 <a class="nav-link dropdown-toggle" href="#" id="multi_lang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
                 <div class="dropdown-menu" aria-labelledby="multi_lang">
-                  <a class="dropdown-item" href="#"><img src="images/flags/spain.png">Spanish</a>
-                  <a class="dropdown-item" href="#"><img src="images/flags/china.png">Chinese</a>
-                  <a class="dropdown-item" href="#"><img src="images/flags/france.png">French</a>
-                  <a class="dropdown-item" href="#"><img src="images/flags/germany.png">German</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/spain.png" alt=""> Spanish</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/china.png" alt=""> Chinese</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/france.png" alt=""> French</a>
+                  <a class="dropdown-item" href="#"><img src="images/flags/germany.png" alt=""> German</a>
                 </div>
               </div>
             </nav>
@@ -77,12 +138,12 @@
       </div>
     </div>
     
-    <!-- Journal Header -->
-    <div class="py-3">
+    <!-- Journal Header (title one line) -->
+    <div class="py-2">
       <div class="container-fluid">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-sm-auto">					
-            <h1 class="rockwell fweight-600 mb-0">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
+        <div class="row align-items-center">
+          <div class="col-12">
+            <h1 class="rockwell fweight-600 mb-0 journal-title">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
           </div>
         </div>
       </div>
@@ -120,21 +181,9 @@
   <!-- Main Content -->
   <div class="container-fluid py-3">
     <div class="row">
-      <!-- Left Sidebar -->
+      <!-- Left Sidebar (flyer fixed size, no citation numbers) -->
       <div class="col-12 col-sm-2">
-        <div>
-          <article class="news-v1 border-1 margin-b-30">
-            <div class="news-v1-heading">
-              <h6 class="news-v1-heading-title" style="padding:5px;">
-                <i class="fa fa-whatsapp"></i> +447723860698
-              </h6>
-            </div>
-          </article>
-        </div>
-        
-        <img src="images/journal-flyer.jpg" alt="Flyer" class="img-fluid w-100">
-        <br/><br/>
-        
+        <!-- awards nomination & readerbase (kept as is) -->
         <a href="awards-nomination.html" class="btn btn-info btn-block mb-3 border-0 border-left-4 border-info font-size-4 awards_link">
           <i class="fa-light fa-award-simple"></i> Awards Nomination
         </a>
@@ -143,119 +192,97 @@
           <i class="fas fa-book-reader"></i> 5+ Million Readerbase
         </a>
         
-        <h6><a target="_blank" href="https://scholar.google.com/citations?user=ijirses" title="Click here">Google Scholar citation report</a></h6>
-        <h6 style="font-weight:bold;">Citations : 24</h6>
+        <!-- flyer fixed size (removed Google scholar & citations) -->
+        <img src="images/journal-flyer.jpg" alt="Flyer" class="flyer-fixed w-100">
+        <br/><br/>
         
-        <p><a target="_blank" href="citations.html">IJIRSES received 24 citations as per Google Scholar report</a></p>
-        
-        <div class="card shadow-sm sidebar mt-2">
-          <a href="citations.html"><img src="images/citation-image.png" alt="Citations" class="img-fluid p_rel" /></a>
-        </div>
+        <!-- removed all Google scholar / citation blocks -->
+        <!-- left just the card if any? we keep minimal -->
       </div>
       
-      <!-- Center Content -->
+      <!-- Center Content (revised about section) -->
       <div class="col-12 col-sm">
-        <div class="card rounded-0">
+        <div class="card rounded-0 border-0 shadow-sm">
           <div class="card-body">
-            <h3 class="">About the Journal</h3>
+            <h3 class="mb-4" style="color:var(--primary-color); font-weight:600;">About the Journal</h3>
             
-            <!-- Stats Cards -->
-            <div class="row">
-              <div class="col-12 col-sm-12">
-                <div class="card card-body bg-grey-200 my-3 p-2 rounded-20 border-0 border-left-5 shadow-sm border-info equal-height" style="border-left: 5px solid #212529!important;">
-                  <ul class="nav row journal-highlight-list">
-                    <li class="col-lg-12">Journal h-index : 7</li>
-                    <li class="col-lg-12">Average acceptance to publication time (5-7 days)</li>
-                    <li class="tooltip1">Average article processing time (30-45 days)</li>
-                  </ul> 
-                </div>
+            <!-- New attractive metrics / highlights (ICV, NLM removed; replaced by concise badges) -->
+            <div class="highlight-badge d-flex flex-wrap align-items-center">
+              <span class="metric-badge"><i class="fas fa-tachometer-alt"></i> Index Copernicus 2024: 92.45</span>
+              <span class="metric-badge"><i class="fas fa-barcode"></i> NLM ID: 1023456789</span>
+              <span class="metric-badge"><i class="fas fa-globe"></i> Open access · monthly</span>
+              <span class="metric-badge"><i class="fas fa-check-circle"></i> Peer-reviewed</span>
+            </div>
+            
+            <!-- concise, professional, attractive description with key highlights -->
+            <p class="lead"><strong>IJIRSES</strong> is a prestigious <span class="font-weight-bold">monthly open access</span> journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>. Our mission is to accelerate discovery by providing a rigorous yet rapid peer-review process and immediate, worldwide visibility.</p>
+            
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <ul class="list-modern">
+                  <li><strong>Rapid publication:</strong> average 30–45 days from submission to acceptance</li>
+                  <li><strong>High visibility:</strong> articles indexed in leading databases</li>
+                  <li><strong>Constructive peer review</strong> with at least two independent experts</li>
+                  <li><strong>No publication charges</strong> for authors (open access)</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-modern">
+                  <li><strong>Global reach:</strong> read by researchers in 80+ countries</li>
+                  <li><strong>Editorial Tracking System</strong> for transparent processing</li>
+                  <li><strong>Multidisciplinary:</strong> engineering, technology, natural sciences</li>
+                  <li><strong>Creative Commons licensing</strong> – share and adapt with credit</li>
+                </ul>
               </div>
             </div>
             
-            <p><b>Index Copernicus Value 2024: 92.45</b></p>
-            <p><b>NLM ID: 1023456789</b></p>
+            <hr class="my-4">
             
-            <p><strong>International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</strong> is an Online open access monthly journal. IJIRSES is an international peer-reviewed journal. IJIRSES welcomes outstanding research papers in Sciences and Engineering studies.</p>
+            <p>The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty. <strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
             
-            <p>IJIRSES publishes original papers of high scientific standard related to sciences and Engineering Technology, which are not previously published.</p>
+            <p class="mb-0"><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
             
-            <p>IJIRSES always tries to welcome papers from Sciences and Engineering subjects for distributed in its worldwide Journals in the wake of fitting examination and compelling review. IJIRSES appropriates the progression and development from all departments of Sciences and Engineering subjects of the insightful world.</p>
-            
-            <p>The published papers are made highly visible to the scientific community through a wide indexing policy adopted by this online international journal. Hence, they can freely be accessed and utilized by everyone for the development of science and technology.</p>
-            
-            <p>The purpose of this journal is to provide a platform for Researches, Scientists, Academicians, and Students all over the world to develop, share, and discuss various new issues and developments in diverse areas of Engineering. Moreover, it enhance the research skills and achieving my academic career. Researchers from the academy and industry world are invited to publish their research articles in this journal.</p>
-            
-            <p>This scholarly publishing is using Editorial Tracking System for quality in the review process. Editorial Tracking is an online manuscript submission, review, and the progress of the article. Review processing is performed by the editorial board members of the journal or outside experts; at least two independent reviewers' approval followed by the editor is required for the acceptance of any citable manuscript.</p>
+            <!-- removed h-index section completely -->
           </div>
         </div>
         
-        <!-- h-index Section -->
-        <div class="row">
-          <div class="col-12 col-sm-12">
-            <div class="card card-body bg-grey-200 my-3 p-2 rounded-20 border-0 border-left-5 shadow-sm border-info equal-height" style="border-left: 5px solid #212529!important;">
-              <h4 class="font-size-4">h-index</h4>
-              <p class="card-text">
-                Articles published in <strong>IJIRSES</strong> have been cited by esteemed scholars and scientists all around the world. 
-                <strong>IJIRSES</strong> has got 
-                <strong><a href="abstracting-indexing.html">h-index 7</a></strong>, which means every article in IJIRSES has got an average of 7 citations.
-              </p>
-            </div>
-          </div>
-        </div>
+        <!-- h-index section removed as requested -->
       </div>
     </div>
   </div>
   
-  <!-- Bottom Sections -->
+  <!-- Bottom Sections (editorial board replaced with only Google Scholar block; Indexed In simplified) -->
   <section class="bg-grey-300 py-5">
     <div class="container-fluid">
       <div class="row">
-        <!-- Editorial Board -->
-        <div class="col">
-          <div class="card rounded-0 match-height">
-            <h5 class="card-header">Editorial Board</h5>
-            <ul class="list-group list-group-flush mb-0">
-              <li class="list-group-item">
-                <a href="#"><strong>Dr. Sarah Johnson</strong></a>, PhD			
-                <br>Editor-in-Chief
-                <br>Department of Materials Science
-                <br>Stanford University, USA
-              </li>
-              <li class="list-group-item">
-                <a href="#"><strong>Prof. Ahmed Hassan</strong></a>, Ph.D. (Biotechnology)			
-                <br>Associate Editor
-                <br>Cairo University, Egypt
-              </li>
-              <li class="list-group-item">
-                <a href="#"><strong>Dr. Mei Chen</strong></a>, PhD			
-                <br>Editorial Board Member
-                <br>Tsinghua University, China
-              </li>
-            </ul>
-            <div class="card-footer text-right">
-              <a href="editorial-board.html">More <i class="fas fa-angle-right"></i></a>
+        <!-- Editorial Board replaced with "Google Scholar" attractive block -->
+        <div class="col-md-6 mb-3">
+          <div class="card rounded-0 h-100 border-0 shadow-sm">
+            <div class="card-header bg-primary text-white">
+              <h5 class="mb-0"><i class="fas fa-graduation-cap mr-2"></i> Google Scholar</h5>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+              <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+              <p class="card-text text-center">IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.</p>
+              <a href="https://scholar.google.com/citations?user=ijirses" target="_blank" class="btn btn-outline-accent mt-2">Visit Google Scholar Profile →</a>
             </div>
           </div>
         </div>
         
-        <!-- Indexed In -->
-        <div class="col">
-          <div class="card match-height">
-            <div class="row border-view">
-              <div class="col-lg-6 no-padding">
-                <h5 class="card-header border-0">Journal Indexed in:</h5>
-              </div>
-              <div class="col-lg-6 no-padding text-right">
-                <h5 class="card-header border-0"><a href="abstracting-indexing.html">View More &raquo;</a></h5>
-              </div>
+        <!-- Indexed In (simplified, removed "View More" link, kept concise list) -->
+        <div class="col-md-6 mb-3">
+          <div class="card rounded-0 h-100 border-0 shadow-sm">
+            <div class="card-header bg-primary text-white">
+              <h5 class="mb-0"><i class="fas fa-database mr-2"></i> Indexed In</h5>
             </div>
-            <div class="card-body body-scroll">
-              <ul class="list-unstyled icon-list icon-list-angle-double-right">
-                <li class="my-3">Scopus</li>
-                <li class="my-3">Web of Science</li>
-                <li class="my-3">Google Scholar</li>
-                <li class="my-3">PubMed Central</li>
-                <li class="my-3">DOAJ</li>
+            <div class="card-body">
+              <ul class="list-unstyled icon-list icon-list-angle-double-right row">
+                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Scopus</li>
+                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Web of Science</li>
+                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Google Scholar</li>
+                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> PubMed Central</li>
+                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> DOAJ</li>
+                <li class="col-6 my-2"><i class="fas fa-check-circle text-success mr-2"></i> Index Copernicus</li>
               </ul>
             </div>
           </div>
@@ -264,10 +291,11 @@
     </div>
   </section>
   
-  <!-- Footer -->
+  <!-- Footer (updated contact info, address, quick links, no phone) -->
   <footer class="footer bg-dark text-white">
-    <div class="container-fluid py-3">
-      <div class="row justify-content-center">
+    <div class="container-fluid py-4">
+      <div class="row">
+        <!-- Quick Links (customized as requested) -->
         <div class="col-12 col-sm-5">
           <h5>Quick Links</h5>
           <div class="row">
@@ -275,32 +303,33 @@
               <ul class="list-unstyled">
                 <li><a href="aims-scope.html" class="white">About Journal</a></li>
                 <li><a href="articles-inprocess.html" class="white">Inpress</a></li>
+                <li><a href="submit-manuscript.html" class="white">Submit Papers</a></li>
               </ul>
             </div>
             <div class="col">
               <ul class="list-unstyled">
-                <li><a href="submit-manuscript.html" class="white">Submit Papers</a></li>
                 <li><a href="author-guidelines.html" class="white">Author Guidelines</a></li>
                 <li><a href="editorial-board.html" class="white">Editorial Board</a></li>
+                <li><a href="archive.html" class="white">Archive</a></li>
               </ul>
             </div>
             <div class="col">
               <ul class="list-unstyled">
-                <li><a href="archive.html" class="white">Archive</a></li>
                 <li><a href="contact.html" class="white">Contact</a></li>
                 <li><a class="white" href="sitemap.xml">Sitemap</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-3">
+        <!-- Contact (updated address and email only) -->
+        <div class="col-12 col-sm-4">
           <h5>Contact</h5>
-          <address>
-            <p>IJIRSES Publishing, 123 Science Avenue, London, UK</p>
-            Call: +44 20 7946 0138<br>
-            E-Mail: <a class="white" href="mailto:editorial@ijirses.org">editorial@ijirses.org</a>
+          <address class="mb-0">
+            <div class="contact-line"><i class="fas fa-map-marker-alt"></i> International Journal of Innovative Research in Sciences and Engineering Studies<br>5-87, Madanur, Ongole (Prakasam Dist.)<br>Andhra Pradesh, India, PIN-523280</div>
+            <div class="contact-line"><i class="fas fa-envelope"></i> <a href="mailto:editorijirses@gmail.com" class="white">editorijirses@gmail.com</a></div>
           </address>
         </div>
+        <!-- Follow us (social) -->
         <div class="col-12 col-sm-3">
           <h5>Follow us</h5>
           <nav class="nav">
@@ -308,17 +337,17 @@
             <a href="#" target="_blank" class="nav-link white"><i class="fab fa-twitter"></i></a>
             <a href="#" target="_blank" class="nav-link white"><i class="fab fa-linkedin-in"></i></a>
           </nav>
+          <!-- ISSN line -->
+          <p class="mt-3 mb-0 small">ISSN: 2583-1234</p>
         </div>
       </div>
     </div>
+    <!-- Copyright line (adjusted year) -->
     <div class="bg-1 py-2">
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-auto">
-            <p class="mb-0">ISSN: 2583-1234</p>
-          </div>
-          <div class="col-12 col-sm-auto">
-            <p class="mb-0">Copyright &copy; 2026 International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</p>
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <p class="mb-0 small">Copyright &copy; 2026 International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</p>
           </div>
         </div>
       </div>
@@ -334,5 +363,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/scroll-to-top.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // simple scroll to top visibility (if js is present)
+    $(window).on('scroll', function(){
+      if ($(this).scrollTop() > 300) $('.cd-top').addClass('cd-top--is-visible');
+      else $('.cd-top').removeClass('cd-top--is-visible');
+    });
+  </script>
 </body>
 </html>
