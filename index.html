@@ -4,406 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>IJIRSES | International Journal of Innovative Research in Sciences and Engineering Studies</title>
-  <meta name="keywords" content="IJIRSES, International Journal of Innovative Research in Sciences and Engineering Studies, open access journal, peer-reviewed, sciences and engineering research" />
+  <meta name="keywords" content="IJIRSES, International Journal of Innovative Research in Sciences and Engineering Studies, open access journal, peer-reviewed" />
   <meta name="description" content="IJIRSES is an online open access monthly international peer-reviewed journal welcoming outstanding research papers in Sciences and Engineering studies." />
   
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Spectral:600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
   
-  <style>
-    /* Root variables */
-    :root {
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --accent: #f1c40f;
-      --light: #ecf0f1;
-      --dark: #2c3e50;
-    }
-    
-    /* Global */
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .bg-primary { background-color: var(--primary) !important; }
-    .bg-accent { background-color: var(--accent) !important; }
-    .text-accent { color: var(--accent) !important; }
-    .rockwell { font-family: 'Spectral', serif; font-weight: 600; color: var(--primary); }
-    
-    /* Header */
-    .top-header {
-      background-color: var(--primary);
-      padding: 0.5rem 1rem;
-    }
-    
-    .logo-img {
-      max-height: 45px;
-      width: auto;
-    }
-    
-    .journal-title {
-      font-size: 1.5rem;
-      line-height: 1.3;
-      color: var(--primary);
-      margin: 0.75rem 0;
-      padding: 0 15px;
-    }
-    
-    @media (max-width: 768px) {
-      .journal-title {
-        font-size: 1.2rem;
-        white-space: normal;
-      }
-    }
-    
-    /* Navigation - Perfectly Centered */
-    .nav-container {
-      background-color: var(--primary);
-    }
-    
-    .navbar-nav {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    
-    .nav-item {
-      margin: 0 2px;
-    }
-    
-    .nav-link {
-      color: rgba(255,255,255,0.9) !important;
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      transition: all 0.2s;
-    }
-    
-    .nav-link:hover,
-    .nav-link.active {
-      color: var(--accent) !important;
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 4px;
-    }
-    
-    .dropdown-menu {
-      border: none;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    /* Main Content - No extra spacing */
-    .main-content {
-      padding: 20px 15px;
-    }
-    
-    .about-card {
-      background: white;
-      border-radius: 8px;
-      padding: 25px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-    }
-    
-    .flyer-img {
-      max-width: 160px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: opacity 0.2s;
-    }
-    
-    .flyer-img:hover {
-      opacity: 0.9;
-    }
-    
-    /* Feature List */
-    .feature-list {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0;
-    }
-    
-    .feature-list li {
-      margin-bottom: 10px;
-      padding-left: 25px;
-      position: relative;
-    }
-    
-    .feature-list li:before {
-      content: "\f00c";
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 0.9rem;
-    }
-    
-    /* Google Scholar Banner */
-    .scholar-banner {
-      background: #fef8e7;
-      border-left: 5px solid var(--accent);
-      border-radius: 8px;
-      padding: 15px 20px;
-      margin: 0 15px 20px;
-      text-align: center;
-    }
-    
-    .scholar-banner i {
-      color: var(--secondary);
-      margin-right: 8px;
-    }
-    
-    /* Footer */
-    .footer {
-      background-color: var(--dark);
-      color: white;
-      padding: 20px 15px 0;
-    }
-    
-    .footer h5 {
-      color: var(--accent);
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-    
-    .contact-line {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-    }
-    
-    .contact-line i {
-      width: 25px;
-      color: var(--accent);
-    }
-    
-    .footer a {
-      color: #ccc;
-      transition: color 0.2s;
-    }
-    
-    .footer a:hover {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    
-    .copyright {
-      background-color: var(--primary);
-      padding: 8px 0;
-      margin-top: 20px;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-    
-    /* Scroll to Top */
-    .scroll-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--secondary);
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s;
-      z-index: 1000;
-    }
-    
-    .scroll-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .scroll-top:hover {
-      background: var(--primary);
-    }
-    
-    /* Remove all extra spacing */
-    .container-fluid {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    
-    .row {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    
-    [class*="col-"] {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENVBW9JCFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ENVBW9JCFM');
+  </script>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <!-- Top Bar -->
-    <div class="top-header">
-      <div class="container-fluid">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-auto">
-            <a href="index.html">
-              <img src="images/logo.jpeg" alt="IJIRSES" class="logo-img" onerror="this.src='images/logo.jpg'">
-            </a>
-          </div>
-          <div class="col-auto">
-            <a href="mailto:editorijirses@gmail.com" class="text-white mr-3">
-              <i class="fas fa-envelope"></i> editorijirses@gmail.com
-            </a>
-            <a href="submit-manuscript.html" class="btn bg-accent" style="background: var(--accent); color: var(--primary); font-weight: 600;">
-              Submit Manuscript
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Journal Title -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1 class="rockwell journal-title">International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</h1>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Navigation - Perfectly Centered -->
-    <div class="nav-container">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark p-0">
-          <button class="navbar-toggler mx-auto my-2" type="button" data-toggle="collapse" data-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link active" href="index.html">Journal Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="editorial-board.html">Editorial Board</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Author Guidelines</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="aims-scope.html">Aim & Scope</a>
-                  <a class="dropdown-item" href="instructions-authors.html">Instructions for Authors</a>
-                  <a class="dropdown-item" href="peer-review-process.html">Peer Review Process</a>
-                  <a class="dropdown-item" href="ethics-malpractices.html">Ethics Statement</a>
-                </div>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="articles-inprocess.html">Articles in Process</a></li>
-              <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
-              <li class="nav-item"><a class="nav-link" href="submit-manuscript.html">Submit Manuscript</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Journal Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
+    <!--#include virtual="components/header.html" -->
   </header>
 
-  <!-- Main Content - No extra spacing -->
-  <div class="main-content">
-    <div class="container-fluid">
-      <!-- About Section with Flyer -->
-      <div class="about-card">
-        <div class="row align-items-start">
-          <div class="col-md-8">
-            <h3 style="color: var(--primary); font-weight: 600; margin-bottom: 20px;">About the Journal</h3>
-            <p class="lead" style="font-size: 1rem;"><strong>IJIRSES</strong> is a prestigious monthly open access journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>.</p>
+  <!-- Main Content -->
+  <div class="container-fluid py-3">
+    <div class="row">
+      <!-- Left column (empty for spacing) -->
+      <div class="col-12 col-sm-2"></div>
+      
+      <!-- Center Content -->
+      <div class="col-12 col-sm">
+        <div class="card rounded-0 border-0 shadow-sm">
+          <div class="card-body">
+            <!-- Row with text and flyer -->
+            <div class="row align-items-start">
+              <div class="col-md-8">
+                <h3 class="mb-3" style="color:var(--primary-color); font-weight:600;">About the Journal</h3>
+                <p class="lead" style="font-size:1rem"><strong>IJIRSES</strong> is a prestigious monthly open access journal dedicated to publishing high-quality research across all disciplines of <strong>Sciences and Engineering</strong>. Our mission is to accelerate discovery by providing a rigorous yet rapid peer-review process and immediate, worldwide visibility.</p>
+              </div>
+              <div class="col-md-4 text-center text-md-right">
+                <!-- Flyer -->
+                <a href="index.html">
+                  <img src="images/flyer.jpeg" alt="Journal Flyer" class="flyer-img" onerror="this.src='images/flyer.jpg'">
+                </a>
+              </div>
+            </div>
             
-            <ul class="feature-list">
-              <li><strong>Rapid publication:</strong> average 3–5 days from acceptance to publication</li>
-              <li><strong>High visibility:</strong> articles indexed in leading databases</li>
-              <li><strong>Constructive peer review</strong> with at least two independent experts</li>
-              <li><strong>Multidisciplinary:</strong> engineering, technology, natural sciences</li>
-              <li><strong>Creative Commons licensing</strong> – share and adapt with credit</li>
-            </ul>
+            <!-- Feature list -->
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><strong>Rapid publication:</strong> average 3–5 days from acceptance to publication</li>
+                  <li><strong>High visibility:</strong> articles indexed in leading databases</li>
+                  <li><strong>Constructive peer review</strong> with at least two independent experts</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><strong>Multidisciplinary:</strong> engineering, technology, natural sciences</li>
+                  <li><strong>Creative Commons licensing</strong> – share and adapt with credit</li>
+                </ul>
+              </div>
+            </div>
             
-            <p style="font-size: 0.95rem;">The journal publishes original research articles, comprehensive reviews, and short communications. All manuscripts undergo thorough evaluation by the editorial board and external referees.</p>
+            <p class="mt-2" style="font-size:0.95rem">The journal publishes original research articles, comprehensive reviews, and short communications that have not been previously published. All manuscripts undergo a thorough evaluation by the editorial board and external referees to ensure scientific soundness and novelty. <strong>IJIRSES</strong> aims to be the platform where ideas from academia and industry converge to shape the future of science and technology.</p>
             
-            <p><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers to submit their innovative work.</p>
-          </div>
-          <div class="col-md-4 text-center">
-            <a href="index.html">
-              <img src="images/flyer.jpeg" alt="Journal Flyer" class="flyer-img" onerror="this.src='images/flyer.jpg'">
-            </a>
+            <p class="mb-0"><i class="fas fa-quote-left text-warning mr-2"></i> We invite researchers, scientists, and practitioners to submit their innovative work and join our community of thought leaders.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  
   <!-- Google Scholar Banner -->
   <div class="scholar-banner">
     <i class="fas fa-graduation-cap"></i>
-    <strong>Google Scholar</strong> — IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index.
+    <strong>Google Scholar</strong> — IJIRSES is indexed in Google Scholar. Track citations, h-index, and i10-index of our published articles.
   </div>
-
+  
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-7">
-          <h5>Contact</h5>
-          <address class="mb-0">
-            <div class="contact-line">
-              <i class="fas fa-map-marker-alt"></i>
-              IJIRSES, 5-87, Madanur, Ongole (Prakasam Dist.) Andhra Pradesh, India - 523280
-            </div>
-            <div class="contact-line">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:editorijirses@gmail.com" class="text-white">editorijirses@gmail.com</a>
-            </div>
-          </address>
-        </div>
-        <div class="col-md-5">
-          <h5>Follow Us</h5>
-          <div class="d-flex">
-            <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <p class="mt-3 small">ISSN: 2583-1658</p>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">
-      <div class="container-fluid">
-        <p class="mb-0">© 2026 International Journal of Innovative Research in Sciences and Engineering Studies (IJIRSES)</p>
-      </div>
-    </div>
+  <footer>
+    <!--#include virtual="components/footer.html" -->
   </footer>
-
-  <!-- Scroll to Top -->
-  <div class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
+  
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  
+  <script src="js/main.js"></script>
   <script>
     // Scroll to top visibility
-    window.addEventListener('scroll', function() {
-      var scrollTop = document.querySelector('.scroll-top');
-      if (window.scrollY > 300) {
-        scrollTop.classList.add('visible');
-      } else {
-        scrollTop.classList.remove('visible');
-      }
+    $(window).on('scroll', function(){
+      if ($(this).scrollTop() > 300) $('.cd-top').addClass('cd-top--is-visible');
+      else $('.cd-top').removeClass('cd-top--is-visible');
     });
   </script>
 </body>
